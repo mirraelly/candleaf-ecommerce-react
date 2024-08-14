@@ -13,6 +13,7 @@ import cleanLavander from "../../assets/images/products-clean-lavander.svg"
 const Popular = () => {
     const [showMore, setShowMore] = useState(false);
 
+
     const products = [
         { name: 'Spiced Mint', image: productOne, price: 9.99 },
         { name: 'Sweet Straweberry', image: sweetStraweberry, price: 9.99 },
@@ -35,14 +36,15 @@ const Popular = () => {
                 <p>Our top selling product that you may like</p>
             </section>
             <section className="">
-                <Row xs="1" md="4" className="g-4">
-                    {products.slice(0, showMore ? products.length : 4).map((product, index) => (
+                <Row xs="1" md="4" className="g-4 py-3">
+                    {products.slice(0, 4).map((product, index) => (
                         <ProductsCard key={index} product={product} />
                     ))}
                 </Row>
-                <Row xs="1" md="4" className="g-4 d-none d-md-flex">
+                
+                <Row xs="1" md="4" className="g-4 d-md-none py-3">
                     {
-                        products.slice(-4).map((product, index) => (
+                        products.slice(4, showMore ? products.length : 0).map((product, index) => (
                             <ProductsCard key={index} product={product} />
                         ))}
                 </Row>
