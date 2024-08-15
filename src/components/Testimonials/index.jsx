@@ -4,6 +4,7 @@ import edoardo from '../../assets/images/testimonial_edoardo.svg';
 import mart from '../../assets/images/testimonial_mart.svg';
 import { Row, Col } from 'reactstrap';
 import TestimonialsCarousel from '../TestimonialCarousel';
+import TestimonialsContainer from "./TestimonialsContainer";
 
 const Testimonials = () => {
 
@@ -14,7 +15,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <section className="my-5 text-center">
+        <TestimonialsContainer className="my-5 py-4 text-center">
             <section className="mt-5">
                 <h1 className="mt-5">Testimonials</h1>
                 <p>Some quotes from our happy customers</p>
@@ -32,7 +33,7 @@ const Testimonials = () => {
                     <TestimonialsCarousel testimonials={testimonials} />
                 </div>
             </section>
-        </section>
+        </TestimonialsContainer>
     );
 }
 

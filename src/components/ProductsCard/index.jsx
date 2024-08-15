@@ -7,10 +7,12 @@ const ProductsCard = ({ product }) => {
         <ProductsCardContainer>
             <Col className=''>
                 <Card className='products-card border-0 my-3 mx-1'>
+                    <div className='d-flex justify-content-center'>
                         <img src={product.image} alt="Image's product" />
+                    </div>
                     <CardBody className='bg-white d-flex justify-content-between'>
                         <CardTitle className='pb-1 title-products-card'>{product.name}</CardTitle>
-                        <CardText className=' d-flex align-items-end products-price'>{product.price}$</CardText>
+                        <CardText className=' d-flex align-items-end products-price text-primary'>{product.price}$</CardText>
                     </CardBody>
                 </Card>
             </Col>

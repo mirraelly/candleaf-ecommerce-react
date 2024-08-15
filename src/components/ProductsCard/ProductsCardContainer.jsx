@@ -17,17 +17,17 @@ const ProductsCardContainer = styled.div`
 
 .products-price {
     font-size: 1.0625em;
-    color: rgba(86, 178, 128, 1);
     font-weight: 500;
     font-family: 'roboto';
 }
 
 @media (max-width: 600px) {
 img {
-    object-position: bottom -105px right 0;
+    object-position: center -2.8125em;
     object-fit: cover;
     transform: scale(1);
-    height: 8.5em;
+    height: 6em;
+    width: 18em;
 }
 }
 

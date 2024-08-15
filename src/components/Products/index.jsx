@@ -33,7 +33,7 @@ const Products = () => {
         <ProductsContainer className="mx-4 my-5 text-center">
             <section className="mt-5">
                 <h1 className="mt-5 primary-2">Products</h1>
-                <p className="text-muted my-2 mx-2 subtitle-products">Order it for you or for your beloved ones</p>
+                <p className="text-muted my-2 subtitle-products">Order it for you or for your beloved ones</p>
             </section>
             <section className="my-5">
                 <Row xs="1" md="4" className="g-4">

@@ -52,7 +52,7 @@ const Popular = () => {
                 {/* mobile version */}
                 <div className="text-center mt-3 d-md-none">
                     <Button color="primary" onClick={toggleShowMore} className="w-100">
-                        {showMore ? 'Ver Menos' : 'Ver Mais'}
+                        {showMore ? 'See less' : 'See more'}
                     </Button>
                 </div>
             </section>

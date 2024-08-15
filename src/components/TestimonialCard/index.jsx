@@ -4,7 +4,7 @@ import TestimonialStar from '../TestimonialStar';
 
 const TestimonialCard = ({ testimonial }) => {
     return (
-        <Col>
+        <Col className='mx-2'>
             <Card className="rounded-0 border-0 d-flex align-items-center">
                 <img src={testimonial.image} alt="Image's testimonial"
                     className='object-fit-cover rounded-circle'

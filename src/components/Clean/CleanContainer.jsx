@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const CleanContainer = styled.section`
+background: #F7F8FA;
 
 .image-col-candles-fragrances {
    /* width: 100%;  */
