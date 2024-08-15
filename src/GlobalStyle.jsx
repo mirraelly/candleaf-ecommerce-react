@@ -40,6 +40,11 @@ li {
 	font-family: "Noto Color Emoji", sans-serif;
 }
 
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
 `;
 
 export default GlobalStyle;

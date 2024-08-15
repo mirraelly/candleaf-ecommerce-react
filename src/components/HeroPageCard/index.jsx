@@ -9,7 +9,7 @@ const HeroPageCard = () => {
                     🌱
                 </span>
                 <CardTitle tag="h1">
-                    The nature candle
+                    The nature <br className='d-block d-md-none'/> candle
                 </CardTitle>
                 <CardText>
                     All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments
