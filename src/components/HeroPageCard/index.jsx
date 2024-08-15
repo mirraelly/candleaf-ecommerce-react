@@ -5,13 +5,13 @@ import HeroPageCardContainer from './HeroPageCardContainer';
 const HeroPageCard = () => {
     return (
         <HeroPageCardContainer className='text-dark text-center' >
-                <span style={{ fontSize: '2em' }} className='emoji'>
+                <span className='emoji plant-emoji'>
                     🌱
                 </span>
-                <CardTitle tag="h1">
+                <CardTitle tag="h1" className='title-heropage'>
                     The nature <br className='d-block d-md-none'/> candle
                 </CardTitle>
-                <CardText>
+                <CardText className='subtitle-heropage mx-2 mb-4'>
                     All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments
                 </CardText>
                 <Button color='primary' className='w-100'>

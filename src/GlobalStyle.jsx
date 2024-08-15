@@ -45,6 +45,13 @@ h1 {
     font-weight: 500;
 }
 
+.btn {
+    font-size: 1.290625em;
+    font-weight: 500;
+    line-height: 1.511875em;
+    font-family: "Roboto", sans-serif;
+}
+
 `;
 
 export default GlobalStyle;
