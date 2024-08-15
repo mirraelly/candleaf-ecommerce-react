@@ -8,7 +8,7 @@ const HeroPageCard = () => {
                 <span className='emoji plant-emoji'>
                     🌱
                 </span>
-                <CardTitle tag="h1" className='title-heropage'>
+                <CardTitle tag="h1" className='title-heropage primary-1'>
                     The nature <br className='d-block d-md-none'/> candle
                 </CardTitle>
                 <CardText className='subtitle-heropage mx-2 mb-4'>

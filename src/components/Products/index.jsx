@@ -9,6 +9,7 @@ import productName from "../../assets/images/products-product-name.svg"
 import fragrantCinnamon from "../../assets/images/products-fragrant-cinnamon.svg"
 import summerCherries from "../../assets/images/products-summer-cherries.svg"
 import cleanLavander from "../../assets/images/products-clean-lavander.svg"
+import ProductsContainer from "./ProductsContainer";
 
 const Products = () => {
     const [showMore, setShowMore] = useState(false);
@@ -29,12 +30,12 @@ const Products = () => {
     ];
 
     return (
-        <section className="mx-4 my-5 text-center">
+        <ProductsContainer className="mx-4 my-5 text-center">
             <section className="mt-5">
-                <h1 className="mt-5">Products</h1>
-                <p>Order it for you or for your beloved ones</p>
+                <h1 className="mt-5 primary-2">Products</h1>
+                <p className="text-muted my-2 mx-2 subtitle-products">Order it for you or for your beloved ones</p>
             </section>
-            <section className="">
+            <section className="my-5">
                 <Row xs="1" md="4" className="g-4">
                     {products.slice(0, showMore ? products.length : 4).map((product, index) => (
                         <ProductsCard key={index} product={product} />
@@ -50,11 +51,11 @@ const Products = () => {
                 {/* mobile version */}
                 <div className="text-center mt-3 d-md-none">
                     <Button color="primary" onClick={toggleShowMore} className="w-100">
-                        {showMore ? 'Ver Menos' : 'Ver Mais'}
+                        {showMore ? 'See less' : 'See more'}
                     </Button>
                 </div>
             </section>
-        </section>
+       </ProductsContainer>
     );
 };
 

@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
 :root {
   --bs-dark-rgb: 27, 27, 27;
   --bs-primary-rgb: 86, 178, 128;
+  --bs-secondary-color: rgba(94, 110, 137, 1);
+  --h1-primary-color-1: rgba(29, 37, 44, 1);
+  --h1-primary-color-2: rgb(11, 37, 75);
 }
 
 .btn-primary {
@@ -27,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     --bs-navbar-disabled-color: rgb(86 178 128 / 100%);
 }
 
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -43,6 +47,15 @@ li {
 h1 {
     font-size: 2.5em;
     font-weight: 500;
+    letter-spacing: -0.9px;
+}
+
+h1.primary-1 {
+    color: var(--h1-primary-color-1);
+}
+
+h1.primary-2 {
+    color: var(--h1-primary-color-2);
 }
 
 .btn {
