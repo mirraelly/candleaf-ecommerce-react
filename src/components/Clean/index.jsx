@@ -5,12 +5,12 @@ import { Button, Container, Row, Col } from 'reactstrap';
 const Clean = () => {
     return (
         <CleanContainer>
-            <Container className='my-5 py-4'>
+            <Container className='mt-5 py-4'>
                 <Row>
                     <Col md="6" xs="12" className="order-md-1 order-2">
-                        <div>
-                            <h1>Clean and fragrant soy wax</h1>
-                            <p>Made for your home and for your wellness</p>
+                        <div className='text-md-start text-center'>
+                            <h1 >Clean and fragrant soy wax</h1>
+                            <p className='text-primary '>Made for your home and for your wellness</p>
                         </div>
                         <div className='py-4'>
                             <li className='text-decoration-none'>

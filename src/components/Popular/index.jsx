@@ -33,7 +33,7 @@ const Popular = () => {
         <section className="mx-4 my-5 text-center">
             <section className="mt-5">
                 <h1 className="mt-5">Popular</h1>
-                <p>Our top selling product that you may like</p>
+                <p className='text-secondary'>Our top selling product that you may like</p>
             </section>
             <section className="">
                 <Row xs="1" md="4" className="g-4 py-3">
@@ -50,7 +50,7 @@ const Popular = () => {
                 </Row>
 
                 {/* mobile version */}
-                <div className="text-center mt-3 d-md-none">
+                <div className="text-center mt-3 pb-3 d-md-none">
                     <Button color="primary" onClick={toggleShowMore} className="w-100">
                         {showMore ? 'See less' : 'See more'}
                     </Button>

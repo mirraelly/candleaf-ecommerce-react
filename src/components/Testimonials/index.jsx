@@ -15,7 +15,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <TestimonialsContainer className="my-5 py-4 text-center">
+        <TestimonialsContainer className="mb-5 py-4 text-center">
             <section className="mt-5">
                 <h1 className="mt-5">Testimonials</h1>
                 <p>Some quotes from our happy customers</p>

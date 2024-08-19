@@ -11,8 +11,8 @@ const Main = () => {
         <MainContainer>
             <Section>
                 < HeroPage />
-            </Section>
-            <Section>
+            </Section >
+            <Section className='container g-0'>
                 < Products />
             </Section>
             <Section>
@@ -21,7 +21,7 @@ const Main = () => {
             <Section>
                 < Testimonials />
             </Section>
-            <Section>
+            <Section className='container g-0'>
                 < Popular />
             </Section>
         </MainContainer>

@@ -6,6 +6,7 @@ const TestimonialsCarousel = ({ testimonials }) => {
     return (
         <Splide
             options={{
+                type: 'loop',
                 padding: { left: 0, right: '10rem' },
                 arrows: false,
                 pagination: false
