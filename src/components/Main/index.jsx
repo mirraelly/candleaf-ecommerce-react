@@ -26,7 +26,6 @@ const Main = () => {
             </Section>
         </MainContainer>
     );
-
 };
 
 export default Main;

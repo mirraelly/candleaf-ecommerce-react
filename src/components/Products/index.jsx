@@ -1,14 +1,7 @@
 import ProductsCard from "../ProductsCard";
 import { useState } from 'react';
 import { Button, Row } from 'reactstrap';
-import productOne from '../../assets/images/products-spiced-mint.svg';
-import sweetStraweberry from "../../assets/images/products-sweet-straweberry.svg"
-import coolBlueberries from "../../assets/images/products-cool-blueberries.svg"
-import juicyLemon from "../../assets/images/products-juicy-lemon.svg"
-import productName from "../../assets/images/products-product-name.svg"
-import fragrantCinnamon from "../../assets/images/products-fragrant-cinnamon.svg"
-import summerCherries from "../../assets/images/products-summer-cherries.svg"
-import cleanLavander from "../../assets/images/products-clean-lavander.svg"
+import ProductsData from "../../db/ProductData";
 import ProductsContainer from "./ProductsContainer";
 
 const Products = () => {
@@ -18,16 +11,7 @@ const Products = () => {
         setShowMore(!showMore);
     };
 
-    const products = [
-        { name: 'Spiced Mint', image: productOne, price: 9.99 },
-        { name: 'Sweet Straweberry', image: sweetStraweberry, price: 9.99 },
-        { name: 'Cool Blueberries', image: coolBlueberries, price: 9.99 },
-        { name: 'Juicy Lemon', image: juicyLemon, price: 9.99 },
-        { name: 'Product Name', image: productName, price: 9.99 },
-        { name: 'Fragrant Cinnamon', image: fragrantCinnamon, price: 9.99 },
-        { name: 'Summer Cherries', image: summerCherries, price: 9.99 },
-        { name: 'Clean Lavander', image: cleanLavander, price: 9.99 }
-    ];
+    const products = ProductsData;
 
     return (
         <ProductsContainer className="mx-4 my-5 text-center">
