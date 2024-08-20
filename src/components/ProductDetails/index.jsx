@@ -19,8 +19,10 @@ const ProductDetails = ({ product }) => {
         <ProductDetailsContainer>
             <Form>
                 <h2>{product.name} Candleaf®</h2>
-                <img src={product.image} alt="Image's product" />
-                <div>
+                <figure className="d-flex justify-content-center image-box border-0 my-3 mx-1">
+                    <img src={product.image} alt="Image's product" className="candle-image"/>
+                </figure>
+                <div className="d-flex">
                     <p className="products-price text-primary">{product.price}$</p>
                     <ProductsQuantity />
                 </div>

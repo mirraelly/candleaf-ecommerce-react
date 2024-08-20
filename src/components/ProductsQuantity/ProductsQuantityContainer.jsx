@@ -1,8 +1,16 @@
 import styled from "styled-components";
 
 const ProductsQuantityContainer = styled.div`
-width: 6.25em;
+width: 100%;
 margin: auto;
+
+.quantity-title {
+    font-size: 1.125em;
+    font-family: 'roboto';
+    font-weight: 400;
+    line-height: 1.6em;
+    text-align: center;
+}
 
  `;
 
