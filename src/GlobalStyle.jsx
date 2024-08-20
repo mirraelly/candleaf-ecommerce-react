@@ -40,6 +40,10 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .emoji {
 	font-family: "Noto Color Emoji", sans-serif;
 }
