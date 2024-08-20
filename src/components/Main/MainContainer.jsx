@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const MainContainer = styled.main`
+const MainContainer = styled.section`
 width: 100%;
 
 

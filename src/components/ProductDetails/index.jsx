@@ -18,7 +18,7 @@ const ProductDetails = ({ product }) => {
     return (
         <ProductDetailsContainer>
             <Form>
-                <h1>{product.name} Spiced Mint Candleaf®</h1>
+                <h2>{product.name} Candleaf®</h2>
                 <img src={product.image} alt="Image's product" />
                 <div>
                     <p className="products-price text-primary">{product.price}$</p>
