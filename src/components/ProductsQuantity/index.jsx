@@ -16,7 +16,7 @@ const Quantity = () => {
     return (
         <ProductsQuantityContainer className='d-flex text-align-center flex-column align-items-center'>
             <label className='quantity-title'>Quantity</label>
-            <InputGroup className='border border-primary w-25' size="sm">
+            <InputGroup className='border border-primary quantity-box' size="sm">
                 <Button color='white' onClick={increment} className='text-primary'>+</Button>
                 <Input
                     type="number"

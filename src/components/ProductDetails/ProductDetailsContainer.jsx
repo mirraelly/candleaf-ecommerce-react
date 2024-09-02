@@ -23,7 +23,7 @@ width: 100%;
 
 .title-box {
     /* height: 150px; */
-     height: 3.125em;
+     min-height: 3.125em;
 }
 
 .products-price {
@@ -33,7 +33,11 @@ width: 100%;
 
 .selected-option  {
     border: 2px solid #E6E6E6;
-    padding: 0.6em;
+    border-radius: 0.4375em;
+}
+
+.option  {
+    border: 2px solid transparent;
     border-radius: 0.4375em;
 }
 

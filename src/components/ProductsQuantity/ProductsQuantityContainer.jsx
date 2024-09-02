@@ -12,6 +12,10 @@ margin: auto;
     text-align: center;
 }
 
+.quantity-box {
+    width: 30%;
+}
+
  `;
 
 export default ProductsQuantityContainer;

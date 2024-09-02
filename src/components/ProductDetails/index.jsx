@@ -38,8 +38,8 @@ const ProductDetails = ({ product }) => {
                                     </p>
                                     <ProductsQuantity className="mb-3" />
                                 </div>
-                                <div className="d-flex flex-column">
-                                    <FormGroup check className={`mb-3 ${selectedOption === 'one-time' ? 'selected-option' : ''}`}>
+                                <div className="d-flex flex-column py-2 gap-3">
+                                    <FormGroup check className={`mb-3 py-1 ${selectedOption === 'one-time' ? 'selected-option' : 'option'}`}>
                                         <Label check className="form-check-label">
                                             <Input
                                                 type="radio"
@@ -49,7 +49,7 @@ const ProductDetails = ({ product }) => {
                                             />
                                             One time purchase</Label>
                                     </FormGroup>
-                                    <FormGroup check className={`mb-3 ${selectedOption === 'subscribe' ? 'selected-option' : ''}`}>
+                                    <FormGroup check className={`mb-3 py-1 ${selectedOption === 'subscribe' ? 'selected-option' : 'option'}`}>
                                         <Label check className="form-check-label">
                                             <Input
                                                 type="radio"
