@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 
 const Layout = ({ children, className }) => {
     return (
-        <LayoutContainer className={className}>
+        <LayoutContainer>
             <ScrollRestoration />
             <Header />
-            <main>{children}</main>
+            <main className={className}>{children}</main>
             <Footer />
         </LayoutContainer>
     );

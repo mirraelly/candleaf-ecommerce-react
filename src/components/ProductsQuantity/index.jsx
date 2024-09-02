@@ -14,15 +14,16 @@ const Quantity = () => {
     };
 
     return (
-        <ProductsQuantityContainer className='d-flex text-align-center flex-column'>
+        <ProductsQuantityContainer className='d-flex text-align-center flex-column align-items-center'>
             <label className='quantity-title'>Quantity</label>
-            <InputGroup className='border border-primary'>
+            <InputGroup className='border border-primary w-25' size="sm">
                 <Button color='white' onClick={increment} className='text-primary'>+</Button>
                 <Input
                     type="number"
                     value={quantity}
                     readOnly
                     className='text-center border-0'
+                    placeholder="Large Input"
                 />
                 <Button color="white" onClick={decrement} className='text-primary'>-</Button>
             </InputGroup>

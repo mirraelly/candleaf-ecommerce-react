@@ -10,7 +10,7 @@ function HomePage() {
   })
   
   return (
-    <Layout className='py-5 my-5 px-2 mx-3'>
+    <Layout className='py-5 my-5'>
       <ProductDetails product={product} />
     </Layout>
   )

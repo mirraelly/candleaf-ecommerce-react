@@ -5,21 +5,25 @@ width: 100%;
 
 .product-details-card {
      width: 18rem;
-    /* padding: 1rem; */
-    /* border-color: '#ccc' */
 }
 
 .image-box  {
     background-color: #F7F8FA;
     line-height: 1.101875em;
     letter-spacing: -0.57px;
+    width: 100%;
+    height: 300px;
+    max-height: 300px;
 }
 
 .candle-image {
- /* box-shadow: 0 0.25em 1.5em rgba(123, 123, 123, 0.15); */
- /* filter: drop-shadow(5px 5px 5px  rgba(123, 123, 123, 0.767)); */
  filter: drop-shadow(10px 10px 8px rgba(0, 0, 0, 0.2))
          drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.1));
+}
+
+.title-box {
+    /* height: 150px; */
+     height: 3.125em;
 }
 
 .products-price {
@@ -27,6 +31,13 @@ width: 100%;
     font-weight: 600;
 }
 
+.weeks-select-box {
+    gap: 0.7em;
+}
+
+.weeks-select {
+    border-color: #E7E7E7;
+}
  `;
 
 export default ProductDetailsContainer;
