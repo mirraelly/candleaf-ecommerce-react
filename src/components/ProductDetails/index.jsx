@@ -39,19 +39,18 @@ const ProductDetails = ({ product }) => {
                                     <ProductsQuantity className="mb-3" />
                                 </div>
                                 <div className="d-flex flex-column">
-                                    <FormGroup check className="mb-3">
-                                        <Label check>
+                                    <FormGroup check className={`mb-3 ${selectedOption === 'one-time' ? 'selected-option' : ''}`}>
+                                        <Label check className="form-check-label">
                                             <Input
                                                 type="radio"
                                                 name="purchaseOptions"
                                                 checked={selectedOption === 'one-time'}
                                                 onChange={() => setSelectedOption('one-time')}
                                             />
-                                            One time purchase
-                                        </Label>
+                                            One time purchase</Label>
                                     </FormGroup>
-                                    <FormGroup check className="mb-3">
-                                        <Label check>
+                                    <FormGroup check className={`mb-3 ${selectedOption === 'subscribe' ? 'selected-option' : ''}`}>
+                                        <Label check className="form-check-label">
                                             <Input
                                                 type="radio"
                                                 name="purchaseOptions"

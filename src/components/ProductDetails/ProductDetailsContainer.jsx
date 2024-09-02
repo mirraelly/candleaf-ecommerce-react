@@ -31,6 +31,16 @@ width: 100%;
     font-weight: 600;
 }
 
+.selected-option  {
+    border: 2px solid #E6E6E6;
+    padding: 0.6em;
+    border-radius: 0.4375em;
+}
+
+.form-check-label {
+    padding-left: 12px;
+}
+
 .weeks-select-box {
     gap: 0.7em;
 }

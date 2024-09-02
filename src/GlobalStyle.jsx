@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --bs-secondary-color: rgba(94, 110, 137, 1);
   --h1-primary-color-1: rgba(29, 37, 44, 1);
   --h1-primary-color-2: rgb(11, 37, 75);
+  --graylight-color: #DBDBDB;
 }
 
 .btn-primary {
@@ -30,6 +31,11 @@ const GlobalStyle = createGlobalStyle`
     --bs-navbar-disabled-color: rgb(86 178 128 / 100%);
 }
 
+
+.form-check-input:checked {
+    background: #87D6AC;
+    border: solid 2px var(--graylight-color);
+}
 
 body {
     font-family: "Poppins", sans-serif;
