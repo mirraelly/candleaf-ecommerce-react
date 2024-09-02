@@ -4,9 +4,9 @@ import CartItems from "../../components/CartItems/index.jsx";
 import Layout from '../../layout';
 
 function HomePage() {
-  const { id } = useParams();
+  // const { id } = useParams();
   const product = ProductsData.find((p) => {
-    return p.id == id;
+    return p.id == 2;
   })
   
   return (

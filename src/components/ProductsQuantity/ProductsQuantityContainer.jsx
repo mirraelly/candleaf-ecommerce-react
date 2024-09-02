@@ -14,6 +14,7 @@ margin: auto;
 
 .quantity-box {
     width: 30%;
+    z-index: 0;
 }
 
  `;

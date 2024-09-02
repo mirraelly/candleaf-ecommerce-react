@@ -7,6 +7,7 @@ import {
     Card, CardBody, CardText,
     Row, Col
 } from 'reactstrap';
+import { Link } from "react-router-dom";
 
 const ProductDetails = ({ product }) => {
     const [selectedOption, setSelectedOption] = useState('one-time');
@@ -72,9 +73,9 @@ const ProductDetails = ({ product }) => {
                                             </p>
                                         </Label>
                                     </FormGroup>
-                                    <Button color="success" className="w-100">
-                                        <i className="bi bi-cart"></i> + Add to cart
-                                    </Button>
+                                    <Link to={'/cart'} className="w-100 btn btn-primary">
+                                        <i className="bi bi-cart pe-2"></i> + Add to cart
+                                    </Link>
                                 </div>
                             </div>
                             <Card className="product-details-card p-2 mt-4 w-100">
