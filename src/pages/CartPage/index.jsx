@@ -1,5 +1,5 @@
 import ProductsData from "../../db/ProductData/index.jsx";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import CartItems from "../../components/CartItems/index.jsx";
 import Layout from '../../layout';
 

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import ProductsQuantity from '../ProductsQuantity';
 import {
-    Container, Button, Form, FormGroup, Label, Input,
-    Card, CardBody, CardText,
-    Row, Col
+    Container, Form, FormGroup, Label, Input, 
+    Card, CardBody, CardText, Row, Col
 } from 'reactstrap';
 import { Link } from "react-router-dom";
 

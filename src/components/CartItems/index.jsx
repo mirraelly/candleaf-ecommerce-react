@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import ProductsQuantity from '../ProductsQuantity';
 import {
-    Button, Row, Col
+    Col, Row
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import CartItemsContainer from './CartItemsContainer';
 
 const CartItems = ({ product }) => {
     return (
-        <>
+        <CartItemsContainer>
             <section className='d-flex flex-column align-items-center py-5'>
                 <h2>Your cart items</h2>
                 <a href="#" className="stretched-link text-primary text-decoration-underline">Back to shopping</a>
             </section>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center g-0">
                 <Col xs="12" md="" className='d-flex justify-content-between px-4 border-bottom'>
                     <p>Product</p>
                     <p>Price</p>
@@ -34,15 +36,15 @@ const CartItems = ({ product }) => {
                     </Col>
                 </Col>
             </Row>
-            <Row>
+            <Row className='g-0'>
                 <div className='d-flex align-items-center justify-content-between'>
                     <p>Sub-total</p>
                     <p>$ 9.99</p>
                 </div>
                 <p>Tax and shipping cost will be calculated later</p>
             </Row>
-            <Button color="success" className="w-100">Checkout</Button>
-        </>
+            <Link to={'#'} className="w-100 btn btn-primary">Checkout</Link>
+        </CartItemsContainer>
     )
 }
 
