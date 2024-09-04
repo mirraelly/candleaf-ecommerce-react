@@ -1,3 +1,4 @@
+import PaymentFormContainer from "./PaymentFormContainer";
 import { Link } from "react-router-dom";
 import {
     Col, Form, FormGroup, Input, Label, Row,
@@ -7,7 +8,7 @@ import {
 const PaymentDetails = () => {
 
     return (
-        <div className="container mt-5">
+        <PaymentFormContainer className="container mt-5">
             <Row>
                 <Col md="7">
                     <div className="d-flex justify-content-between align-items-center">
@@ -47,8 +48,8 @@ const PaymentDetails = () => {
                         <FormGroup>
                             <Input type="text" name="province" id="province" placeholder="City" />
                         </FormGroup>
-                        <FormGroup className="form-floating">
-                            <Input id="province" name="province" type="select">
+                        <FormGroup className="form-floating " >
+                            <Input id="province" name="province" type="select" className="custom-select">
                                 <option value="">Select your province</option>
                                 <option> 1 </option>
                                 <option> 2 </option>
@@ -56,20 +57,20 @@ const PaymentDetails = () => {
                             <Label for="floatingProvince">Province</Label>
                         </FormGroup>
                         <FormGroup className="form-floating">
-                            <Input id="country" name="country" type="select">
+                            <Input id="country" name="country" type="select" className="custom-select">
                                 <option value="">Italy</option>
                                 <option> 1 </option>
                                 <option> 2 </option>
                             </Input>
                             <Label for="floatingCountry">Country/Region</Label>
                         </FormGroup>
-                        <FormGroup check>
+                        <FormGroup check className="py-3">
                             <Label check>
                                 <Input type="checkbox" />{' '}
                                 Save this information for a future fast checkout
                             </Label>
                         </FormGroup>
-                        <div className="d-flex flex-column align-items-center gap-3">
+                        <div className="d-flex flex-column align-items-center gap-3 pt-4">
                             <Link to={'#'} className="w-100 btn btn-primary">
                                 Go to shipping
                             </Link>
@@ -80,7 +81,7 @@ const PaymentDetails = () => {
                     </Form>
                 </Col>
             </Row>
-        </div>
+        </PaymentFormContainer>
     );
 };
 
