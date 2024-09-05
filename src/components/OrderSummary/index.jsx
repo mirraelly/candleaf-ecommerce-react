@@ -18,7 +18,9 @@ const OrderSummary = (props) => {
             <Col md="6">
                 <Accordion open={open} toggle={toggle}>
                     <AccordionItem>
-                        <AccordionHeader targetId="1">Accordion Item 1</AccordionHeader>
+                        <AccordionHeader targetId="1" className="text-primary">
+                            See your order details
+                        </AccordionHeader>
                         <AccordionBody accordionId="1">
                             <strong>This is the first item&#39;s accordion body.</strong>
                             You can modify any of this with custom CSS or overriding our default

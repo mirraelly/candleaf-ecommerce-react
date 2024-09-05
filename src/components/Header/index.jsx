@@ -5,7 +5,7 @@ import {
          NavbarToggler, CloseButton
          } from 'reactstrap';
 import userIcon from '../../assets/images/user-icon.svg';
-import cart from '../../assets/images/cart-icon.svg';
+import Cart from '../Cart';
 import HeaderContainer from "./HeaderContainer";
 import Logo from '../Logo';
 
@@ -26,11 +26,7 @@ const Header = () => {
                             <img src={userIcon} alt='User icon' />
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink href='/cart/'>
-                            <img src={cart} alt='Cart icon' />
-                        </NavLink>
-                    </NavItem>
+                    <Cart />
                 </Nav>
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar className='ms-2'>
