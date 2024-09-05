@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const PaymentFormContainer = styled.section`
-width: 100%;
+const OrderFormContainer = styled.section`
+/* width: 100%; */
 
 .form-control,
 .form-select {
@@ -23,4 +23,4 @@ width: 100%;
 
  `;
 
-export default PaymentFormContainer;
+export default OrderFormContainer;
