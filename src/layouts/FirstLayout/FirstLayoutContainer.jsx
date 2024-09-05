@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LayoutContainer = styled.section`
+const FirstLayoutContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,4 +8,4 @@ const LayoutContainer = styled.section`
   
 `;
 
-export default LayoutContainer;
+export default FirstLayoutContainer;

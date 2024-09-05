@@ -1,15 +1,17 @@
-import Logo from "../components/Logo";
+import Logo from "../../../components/Logo";
 import { ScrollRestoration } from "react-router-dom";
 import PropTypes from 'prop-types';
-import Layout2Container from "./Layout2container";
+import Nav from "../../components/Nav";
+import SecondLayoutContainer from "./SecondLayoutContainer";
 
 const LayoutSecondary = ({ children, className }) => {
     return (
-        <Layout2Container >
+        <SecondLayoutContainer >
             <ScrollRestoration />
             <Logo />
+            < Nav />
             <main className={className}>{children}</main>
-        </Layout2Container>
+        </SecondLayoutContainer>
     );
 };
 

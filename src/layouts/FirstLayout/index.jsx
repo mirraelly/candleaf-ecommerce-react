@@ -1,17 +1,17 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { ScrollRestoration } from "react-router-dom";
-import LayoutContainer from "./LayoutContainer";
 import PropTypes from 'prop-types';
+import FirstLayoutContainer from '../FirstLayout/FirstLayoutContainer.jsx';
 
 const Layout = ({ children, className }) => {
     return (
-        <LayoutContainer>
+        <FirstLayoutContainer >
             <ScrollRestoration />
             <Header />
             <main className={className}>{children}</main>
             <Footer />
-        </LayoutContainer>
+        </FirstLayoutContainer>
     );
 };
 

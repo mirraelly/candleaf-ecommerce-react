@@ -5,7 +5,7 @@ import { Col, Form, FormGroup, Input, Label } from "reactstrap";
 const OrderForm = () => {
 
     return (
-        <OrderFormContainer className="container mt-5">
+        <OrderFormContainer className="container my-5">
             <Col md="6">
                 <div className="d-flex justify-content-between align-items-center">
                     <h3 className="mb-4">Contact</h3>

@@ -1,7 +1,5 @@
 import cart from '../../assets/images/cart-icon.svg';
-import {
-    NavItem, NavLink
-} from 'reactstrap';
+import { NavItem, NavLink } from 'reactstrap';
 
 const Cart = () => {
 

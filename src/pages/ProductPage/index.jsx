@@ -1,7 +1,7 @@
 import ProductsData from "../../db/ProductData/index.jsx";
 import { useParams } from "react-router-dom";
 import ProductDetails from '../../components/ProductDetails';
-import Layout from '../../layout';
+import Layout from '../../layouts/FirstLayout';
 
 function HomePage() {
   const { id } = useParams();

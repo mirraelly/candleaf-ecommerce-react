@@ -2,11 +2,16 @@ import OrderSummaryContainer from "./OrderSummaryContainer";
 import { Col } from "reactstrap";
 import { useState } from "react";
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
+import Cart from '../Cart/index';
+// import chevron from '../../assets/images/icon-chevron.svg';
+import ProductsCard from "../ProductsCard";
+import PropTypes from 'prop-types';
 
-const OrderSummary = (props) => {
+
+const OrderSummary = ({ product }) => {
     const [open, setOpen] = useState('1');
     const toggle = (id) => {
-        if (open === id) {
+        if (open === id ) {
             setOpen();
         } else {
             setOpen(id);
@@ -14,19 +19,20 @@ const OrderSummary = (props) => {
     };
 
     return (
-        <OrderSummaryContainer>
+        <OrderSummaryContainer className="mt-2">
             <Col md="6">
                 <Accordion open={open} toggle={toggle}>
                     <AccordionItem>
-                        <AccordionHeader targetId="1" className="text-primary">
+                        <AccordionHeader targetId="1" className="d-flex">
+                            < Cart />
                             See your order details
+                            {/* <img src={chevron} alt='User icon' /> */}
+                            <p>$ 9,99</p>
                         </AccordionHeader>
                         <AccordionBody accordionId="1">
-                            <strong>This is the first item&#39;s accordion body.</strong>
-                            You can modify any of this with custom CSS or overriding our default
-                            variables. It&#39;s also worth noting that just about any HTML can
-                            go within the <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                            <section>
+                                <ProductsCard product={product} />
+                            </section>
                         </AccordionBody>
                     </AccordionItem>
                 </Accordion>
@@ -34,5 +40,9 @@ const OrderSummary = (props) => {
         </OrderSummaryContainer>
     )
 };
+
+OrderSummary.propTypes = {
+    product: PropTypes.object.isRequired
+}
 
 export default OrderSummary;
