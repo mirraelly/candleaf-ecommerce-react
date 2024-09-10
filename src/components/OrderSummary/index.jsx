@@ -1,10 +1,9 @@
 import OrderSummaryContainer from "./OrderSummaryContainer";
-import { Button, Col, Form, FormGroup, Input, Label, Row, Table } from "reactstrap";
+import { Button, Col, Form, FormGroup, Input, Table } from "reactstrap";
 import { useState } from "react";
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 import Cart from '../Cart/index';
 // import chevron from '../../assets/images/icon-chevron.svg';
-import ProductsCard from "../ProductsCard";
 import PropTypes from 'prop-types';
 import ProductsData from "../../db/ProductData";
 import chevron from '../../assets/images/icon-chevron.svg';
@@ -42,9 +41,20 @@ const OrderSummary = ({ className }) => {
                         <AccordionBody accordionId="1">
                             <Table>
                                 <thead>
-                                    <tr>
-                                        <th scope="row" colSpan="2">
-                                            <ProductsCard product={product} />
+                                    <tr className="mb-5" scope="row">
+                                        <th scope="col">
+                                            <figure className="image-box w-75 border-0 d-flex flex-column-reverse position-relative">
+                                                <img src={product.image} alt="Image's product" className="candle-image img-fluid" />
+                                                <span className="position-absolute top-0 start-100 translate-middle px-2 bg-primary border border-light rounded-circle text-white">
+                                                   1
+                                                </span>
+                                            </figure>
+                                            {/* <span>2</span>  */}
+                                            {/*show quantity of items */}
+                                        </th>
+                                        <th scope="col" className="d-flex flex-column border-0 gap-3">
+                                            <h5 className="product-title">{product.name} Candleaf®</h5>
+                                            <p className="  text-primary">${product.price}</p>
                                         </th>
                                     </tr>
                                 </thead>
@@ -60,21 +70,20 @@ const OrderSummary = ({ className }) => {
                                         </td>
                                     </tr>
                                     <tr scope="row">
-                                        <td>Subtotal
-                                            <br />
-                                            Shipping
+                                        <td scope="row" className="">
+                                            <p>Subtotal</p>
+                                            <p>Shipping</p>
                                         </td>
-                                        <td className="text-right">
-                                            $9.99
-                                            <br />
-                                            Calculated at the next step
+                                        <td scope="col" className="text-end">
+                                            <p>$9.99</p>
+                                            <p>Calculated at the next step</p>
                                         </td>
                                     </tr>
                                     <tr scope="row" className="">
                                         <td scope="col">
                                             Total
                                         </td>
-                                        <td scope="col" className="text-right">
+                                        <td scope="col" className="text-end">
                                             <strong>$9.99</strong>
                                         </td>
                                     </tr>
