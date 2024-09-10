@@ -3,11 +3,8 @@ import { Button, Col, Form, FormGroup, Input, Table } from "reactstrap";
 import { useState } from "react";
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 import Cart from '../Cart/index';
-// import chevron from '../../assets/images/icon-chevron.svg';
 import PropTypes from 'prop-types';
 import ProductsData from "../../db/ProductData";
-import chevron from '../../assets/images/icon-chevron.svg';
-import { Link } from "react-router-dom";
 
 const OrderSummary = ({ className }) => {
     const product = ProductsData.find((p) => p.id == 1);
