@@ -1,15 +1,21 @@
-import { Nav, NavLink, Breadcrumb } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 const OrderNav = () => {
     return (
-        <Nav>
-            <Breadcrumb>
-                <NavLink href="/cart">Cart</NavLink>
-                <NavLink href="/details">Details</NavLink>
-                <NavLink href="/shipping">Shipping</NavLink>
-                <NavLink href="/payment" active>Payment</NavLink>
-            </Breadcrumb>
-        </Nav>
+        <Breadcrumb className='mx-3'>
+            <BreadcrumbItem href="/cart" tag="a" className='text-primary'>
+                Cart
+            </BreadcrumbItem>
+            <BreadcrumbItem href="/details" tag="a" className='text-black'>
+                Details
+            </BreadcrumbItem>
+            <BreadcrumbItem href="/shipping" tag="a" className='text-light-emphasis'>
+                Shipping
+            </BreadcrumbItem>
+            <BreadcrumbItem href="/payment" active className='text-light-emphasis'>
+                Payment
+            </BreadcrumbItem>
+        </Breadcrumb>
     );
 };
 

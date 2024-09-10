@@ -1,16 +1,14 @@
-import Logo from "../../../components/Logo";
 import { ScrollRestoration } from "react-router-dom";
 import PropTypes from 'prop-types';
-import Nav from "../../components/Nav";
 import SecondLayoutContainer from "./SecondLayoutContainer";
+import SecondaryHeader from "../../components/SecondaryHeader";
 
 const LayoutSecondary = ({ children, className }) => {
     return (
-        <SecondLayoutContainer >
+        <SecondLayoutContainer>
             <ScrollRestoration />
-            <Logo />
-            < Nav />
-            <main className={className}>{children}</main>
+            <SecondaryHeader className="g-0"/>
+            <main className={`${className} second-layout-main`}>{children}</main>
         </SecondLayoutContainer>
     );
 };

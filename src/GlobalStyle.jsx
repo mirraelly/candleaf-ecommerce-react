@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
   --h1-primary-color-1: rgba(29, 37, 44, 1);
   --h1-primary-color-2: rgb(11, 37, 75);
   --graylight-color: #DBDBDB;
+  --bs-navbar-brand-padding-y: 0.8em;
+  --bs-breadcrumb-divider: ">";
 }
 
 .btn-primary {

@@ -5,6 +5,9 @@ const SecondLayoutContainer = styled.section`
   flex-direction: column;
   justify-content: space-between;
 
+  .second-layout-main {
+    padding: 0 1em;
+  }
   
 `;
 
