@@ -1,5 +1,5 @@
 import OrderSummaryContainer from "./OrderSummaryContainer";
-import { Col } from "reactstrap";
+import { Button, Col, Form, FormGroup, Input, Label, Row, Table } from "reactstrap";
 import { useState } from "react";
 import { Accordion, AccordionBody, AccordionHeader, AccordionItem, } from 'reactstrap';
 import Cart from '../Cart/index';
@@ -8,6 +8,7 @@ import ProductsCard from "../ProductsCard";
 import PropTypes from 'prop-types';
 import ProductsData from "../../db/ProductData";
 import chevron from '../../assets/images/icon-chevron.svg';
+import { Link } from "react-router-dom";
 
 const OrderSummary = ({ className }) => {
     const product = ProductsData.find((p) => p.id == 1);
@@ -22,7 +23,7 @@ const OrderSummary = ({ className }) => {
 
     return (
         <OrderSummaryContainer className={`${className} mt-2`}>
-            <Col md="6">
+            <Col md="6" sm="12">
                 <Accordion open={open} toggle={toggle}>
                     <AccordionItem>
                         <AccordionHeader targetId="1" className="d-flex">
@@ -39,9 +40,48 @@ const OrderSummary = ({ className }) => {
                             <span>$ 9,99</span>
                         </AccordionHeader>
                         <AccordionBody accordionId="1">
-                            <section>
-                                <ProductsCard product={product} />
-                            </section>
+                            <Table>
+                                <thead>
+                                    <tr>
+                                        <th scope="row" colSpan="2">
+                                            <ProductsCard product={product} />
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr scope="row">
+                                        <td colSpan="2">
+                                            <Form>
+                                                <FormGroup className="d-flex w-100 gap-2">
+                                                    <Input type="text" name="coupon" id="couponCode" placeholder="Enter coupon code" className="w-75" />
+                                                    <Button color="secondary" className="border-0">Add code</Button>
+                                                </FormGroup>
+                                            </Form>
+                                        </td>
+                                    </tr>
+                                    <tr scope="row">
+                                        <td>Subtotal
+                                            <br />
+                                            Shipping
+                                        </td>
+                                        <td className="text-right">
+                                            $9.99
+                                            <br />
+                                            Calculated at the next step
+                                        </td>
+                                    </tr>
+                                    <tr scope="row" className="">
+                                        <td scope="col">
+                                            Total
+                                        </td>
+                                        <td scope="col" className="text-right">
+                                            <strong>$9.99</strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </Table>
+
                         </AccordionBody>
                     </AccordionItem>
                 </Accordion>

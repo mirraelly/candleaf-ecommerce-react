@@ -16,7 +16,7 @@ const OrderForm = () => {
                 </div>
                 <Form>
                     <FormGroup>
-                        <Input type="text" name="email" id="email" placeholder="Email or mobile phone number" />
+                        <Input type="text" name="email" id="email" placeholder="Email or mobile phone number" className="border-primary"/>
                     </FormGroup>
                     <FormGroup check>
                         <Label check>

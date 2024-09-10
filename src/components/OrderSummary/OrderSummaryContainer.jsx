@@ -21,6 +21,19 @@ width: 100%;
     transform: var(--bs-accordion-btn-icon-transform);
 }
 
+.form-control {
+    border-radius: initial;
+}
+
+.form-control,
+.btn {
+    border-color: #898989;
+}
+
+.btn-secondary {
+    background-color: #A8A8A8;
+}
+
  `;
 
 export default OrderSummaryContainer;
