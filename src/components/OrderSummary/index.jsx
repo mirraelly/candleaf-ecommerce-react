@@ -46,8 +46,6 @@ const OrderSummary = ({ className }) => {
                                                    1
                                                 </span>
                                             </figure>
-                                            {/* <span>2</span>  */}
-                                            {/*show quantity of items */}
                                         </th>
                                         <th scope="col" className="d-flex flex-column border-0 gap-3">
                                             <h5 className="product-title">{product.name} Candleaf®</h5>
@@ -85,9 +83,7 @@ const OrderSummary = ({ className }) => {
                                         </td>
                                     </tr>
                                 </tbody>
-
                             </Table>
-
                         </AccordionBody>
                     </AccordionItem>
                 </Accordion>
