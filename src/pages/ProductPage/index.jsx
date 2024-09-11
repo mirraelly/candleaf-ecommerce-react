@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ProductDetails from '../../components/ProductDetails';
 import Layout from '../../layouts/FirstLayout';
 
-function HomePage() {
+function ProductPage() {
   const { id } = useParams();
   const product = ProductsData.find((p) => {
     return p.id == id;
@@ -16,4 +16,4 @@ function HomePage() {
   )
 }
 
-export default HomePage;
+export default ProductPage;

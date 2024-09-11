@@ -1,7 +1,7 @@
 import SecondLayout from "../../layouts/SecondLayout";
 import Shipping from "../../components/Shipping";
 
-function HomePage() {
+function ShippingPage() {
 
     return (
         <SecondLayout>
@@ -10,4 +10,4 @@ function HomePage() {
     )
 }
 
-export default HomePage;
+export default ShippingPage;

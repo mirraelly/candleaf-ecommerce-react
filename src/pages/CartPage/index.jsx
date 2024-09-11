@@ -3,7 +3,7 @@ import ProductsData from "../../db/ProductData/index.jsx";
 import CartItems from "../../components/CartItems/index.jsx";
 import Layout from '../../layouts/FirstLayout';
 
-function HomePage() {
+function CartPage() {
   // const { id } = useParams();
   const product = ProductsData.find((p) => {
     return p.id == 2;
@@ -16,4 +16,4 @@ function HomePage() {
   )
 }
 
-export default HomePage;
+export default CartPage;

@@ -1,7 +1,7 @@
 import SecondLayout from "../../layouts/SecondLayout";
 import OrderDetails from "../../components/OrderDetails/index.jsx";
 
-function HomePage() {
+function OrderPage() {
 
   return (
     <SecondLayout>
@@ -10,4 +10,4 @@ function HomePage() {
   )
 }
 
-export default HomePage;
+export default OrderPage;
