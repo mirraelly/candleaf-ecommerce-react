@@ -8,6 +8,7 @@ import ProductPage from "../pages/ProductPage";
 import CartPage from "../pages/CartPage";
 import OrderPage from "../pages/OrderPage";
 import ShippingPage from "../pages/ShippingPage";
+import PaymentPage from "../pages/PaymentPage";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const routes = createBrowserRouter(
       <Route path="/cart" element={<CartPage />} />
       <Route path="/order" element={<OrderPage />} />
       <Route path="/shipping" element={<ShippingPage />} />
+      <Route path="/payment" element={<PaymentPage />} />
    
     </>
   )

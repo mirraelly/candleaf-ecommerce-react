@@ -2,6 +2,12 @@ import styled from "styled-components";
 
 const CleanContainer = styled.section`
 background: #F7F8FA;
+padding: 5em 2em 10em 2em;
+
+ul { 
+    list-style-type: none; 
+    padding-left: 0;
+}
 
 .image-col-candles-fragrances {
    /* width: 100%;  */
@@ -11,10 +17,14 @@ background: #F7F8FA;
 
 .image-candles-fragrances {
     width: 100%; 
-    /* overflow: clip; */
-    /* object-position: 5px 0px; */
+    overflow: visible;
+    object-position: 19px 8px;
 }
 
+@media screen and (max-width: 800px) {
+    padding: 1em;
+
+}
 
 `;
 
