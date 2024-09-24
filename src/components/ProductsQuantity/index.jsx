@@ -22,7 +22,7 @@ const Quantity = () => {
                     type="number"
                     value={quantity}
                     readOnly
-                    className='text-end border-0'
+                    className='text-center border-0'
                     placeholder="Large Input"
                 />
                 <Button color="white" onClick={decrement} className='text-primary signal-button'>-</Button>
