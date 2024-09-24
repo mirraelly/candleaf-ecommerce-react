@@ -12,8 +12,8 @@ width: 100%;
     line-height: 1.101875em;
     letter-spacing: -0.57px;
     width: 100%;
-    height: 300px;
-    max-height: 300px;
+    /* height: 300px; */
+    min-height: 300px;
 }
 
 .candle-image {
