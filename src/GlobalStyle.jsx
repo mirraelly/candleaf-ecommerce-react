@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   --bs-dark-rgb: 27, 27, 27;
   --bs-primary-rgb: 86, 178, 128;
   --bs-secondary-color: rgba(94, 110, 137, 1);
+  --bs-grey-color: rgba(229, 229, 229, 100%);
   --h1-primary-color-1: rgba(29, 37, 44, 1);
   --h1-primary-color-2: rgb(11, 37, 75);
   --graylight-color: #DBDBDB;
