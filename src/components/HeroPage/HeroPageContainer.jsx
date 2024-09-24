@@ -4,14 +4,14 @@ const HeroPageContainer = styled.div`
   background-color: #ffffff;
 
   .initial-page-image {
-    overflow: hidden;
-    object-position: 0px -538px;
+    max-height: 730px;
+    object-fit: cover;
   }
 
   @media screen and (max-width: 800px) {
     .banner-image-container {
-        overflow: hidden;
-    min-height: 780px;
+      overflow: hidden;
+      min-height: 45.875em;
     }
 
     .initial-page-image {

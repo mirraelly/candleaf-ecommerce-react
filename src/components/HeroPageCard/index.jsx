@@ -14,7 +14,7 @@ const HeroPageCard = () => {
                 <CardText className='subtitle-heropage mb-4'>
                     All handmade with natural soy wax, Candleaf is a companion for all your pleasure moments
                 </CardText>
-                <Button color='primary' className='w-100'>
+                <Button color='primary' className='w-100 mt-md-3'>
                     Discovery our collection
                 </Button>
         </HeroPageCardContainer>
