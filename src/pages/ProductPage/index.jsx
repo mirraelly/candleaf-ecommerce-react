@@ -10,7 +10,7 @@ function ProductPage() {
   })
   
   return (
-    <Layout className='py-5 my-5'>
+    <Layout className='pt-5 pb-md-5 my-5'>
       <ProductDetails product={product} />
     </Layout>
   )

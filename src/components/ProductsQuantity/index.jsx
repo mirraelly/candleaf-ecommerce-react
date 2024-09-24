@@ -14,18 +14,18 @@ const Quantity = () => {
     };
 
     return (
-        <ProductsQuantityContainer className='d-flex text-align-center flex-column align-items-center'>
+        <ProductsQuantityContainer className='d-flex text-align-center flex-column align-items-md-start p-0 w-75 m-0'>
             <label className='quantity-title'>Quantity</label>
-            <InputGroup className='border border-primary quantity-box' size="sm">
-                <Button color='white' onClick={increment} className='text-primary'>+</Button>
+            <InputGroup className='border border-primary quantity-box d-flex flex-row' size="sm">
+                <Button color='white' onClick={increment} className='text-primary signal-button'>+</Button>
                 <Input
                     type="number"
                     value={quantity}
                     readOnly
-                    className='text-center border-0'
+                    className='text-end border-0'
                     placeholder="Large Input"
                 />
-                <Button color="white" onClick={decrement} className='text-primary'>-</Button>
+                <Button color="white" onClick={decrement} className='text-primary signal-button'>-</Button>
             </InputGroup>
         </ProductsQuantityContainer>
     );
