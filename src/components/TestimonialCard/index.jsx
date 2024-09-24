@@ -5,10 +5,10 @@ import TestimonialStar from '../TestimonialStar';
 const TestimonialCard = ({ testimonial }) => {
     return (
         <Col className='mx-2'>
-            <Card className="rounded-0 border-0 d-flex align-items-center">
+            <Card className="rounded-0 border-0 d-flex align-items-center" style={{ width: '18em', padding: '1em'}}>
                 <img src={testimonial.image} alt="Image's testimonial"
                     className='object-fit-cover rounded-circle'
-                    style={{ width: '5.25em', height: '5.25em' }} />
+                    style={{ width: '5.25em', height: '5.25em'}} />
                 <TestimonialStar rate={testimonial.rate}></TestimonialStar>
                 <CardBody className='text-center d-flex flex-column'>
                     <CardTitle>{testimonial.title}</CardTitle>
