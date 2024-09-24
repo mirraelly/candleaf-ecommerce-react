@@ -9,9 +9,15 @@ const HeroPageContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
+    .banner-image-container {
+        overflow: hidden;
+    min-height: 780px;
+    }
+
     .initial-page-image {
       overflow: visible;
-      object-position: 0px 54px;
+      object-position: 0px 106px;
+      transform: scale(1.5);
     }
   }
 `;

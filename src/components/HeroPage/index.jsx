@@ -6,7 +6,7 @@ import HeroPageCard from "../HeroPageCard";
 const HeroPage = () => {
   return (
     <HeroPageContainer>
-      <Card inverse className="rounded-0 border-0">
+      <Card inverse className="rounded-0 border-0 banner-image-container">
         <CardImg
           alt="backdrop containing aromatic candles and plants"
           src={banner}
