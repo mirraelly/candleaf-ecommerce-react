@@ -12,7 +12,7 @@ const ShippingMethod = () => {
                     <CardBody className="mx-2">
                         <Row>
                             <Col xs="3">
-                                <h6 className="mb-3">Contact</h6>
+                                <h6 className="mb-3 text-secondary">Contact</h6>
                             </Col>
                             <Col xs="7">
                                 <span>joe.spagnuolo@uxbly.com</span>
@@ -26,7 +26,7 @@ const ShippingMethod = () => {
                             <hr className="border-primary border-opacity-50"/>
 
                             <Col xs="3">
-                                <h6 className="mb-3">Ship to</h6>
+                                <h6 className="mb-3 text-secondary">Ship to</h6>
                             </Col>
                             <Col xs="7">
                                 <span>Via Firenze 23, 92023, Campobello <br />
@@ -54,7 +54,7 @@ const ShippingMethod = () => {
                                 </FormGroup>
                             </Col>
                             <Col xs="4" className="text-end">
-                                <span className="float-right">Free</span>
+                                <span className="float-right fw-bold">Free</span>
                             </Col>
                         </Row>
                     </CardBody>

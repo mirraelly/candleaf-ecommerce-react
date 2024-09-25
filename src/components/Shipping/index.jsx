@@ -1,13 +1,13 @@
 import { Row } from "reactstrap";
-import OrderSummary from "../OrderSummary";
 import ShippingMethod from "../ShippingMethod";
+import OrderSummaryAccordion from "../OrderSummaryAccordion";
 
 const Shipping = () => {
 
     return (
         < >
             <Row>
-                < OrderSummary className='d-none d-md-block' />
+                < OrderSummaryAccordion className='d-none d-md-block' />
                 < ShippingMethod />
             </Row>
         </>

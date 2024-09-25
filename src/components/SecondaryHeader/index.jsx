@@ -1,13 +1,13 @@
 import Logo from "../Logo";
 import Nav from "../Nav";
 import SecondaryHeaderContainer from './SecondaryHeaderContainer';
-import OrderSummary from '../OrderSummary';
+import OrderSummaryAccordion from "../OrderSummaryAccordion";
 
 const SecondaryHeader = () => {
     return (
         <SecondaryHeaderContainer>
             <Logo />
-            <OrderSummary className='d-md-none mb-3'/>
+            <OrderSummaryAccordion className='d-md-none mb-3'/>
             <Nav />
         </SecondaryHeaderContainer>
     );
