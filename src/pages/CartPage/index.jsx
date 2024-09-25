@@ -10,7 +10,7 @@ function CartPage() {
   })
   
   return (
-    <Layout className='py-5 my-5'>
+    <Layout className='p-md-5 m-md-5 pt-5 mt-5'>
       <CartItems product={product} />
     </Layout>
   )

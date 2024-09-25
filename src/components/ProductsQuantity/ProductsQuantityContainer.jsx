@@ -8,7 +8,7 @@ const ProductsQuantityContainer = styled.div`
     font-size: 1.125em;
     font-family: "roboto";
     font-weight: 400;
-    line-height: 1.8em;
+    line-height: 1.3em;
     text-align: center;
   }
 
@@ -17,30 +17,42 @@ const ProductsQuantityContainer = styled.div`
     z-index: 0;
   }
 
-  .signa-button {
+  /* .signal-button {
     width: 1em;
-  }
+  } */
 
   .input-group-sm > .btn,
   .input-group-sm > .form-control,
   .input-group-sm > .form-select,
   .input-group-sm > .input-group-text {
-    padding: 0.1rem 0.2rem;
+    padding: 0 0.5rem;
   }
 
-  .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-    margin-left: calc(var(--bs-border-width) * 8);
+  .input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+      .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: calc(var(--bs-border-width) * -7);
+    /* margin-left: auto;
+    margin-right: auto; */
   }
 
-  .input-group-sm>.btn,
-  .input-group-sm>.form-control {
+  .input-group-sm > .btn,
+  .input-group-sm > .form-control {
     font-size: 1.2em;
   }
 
   @media screen and (max-width: 800px) {
-    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-    margin-left: auto;
-  }
+     .ejMYRA .input-group-sm>.form-control {
+      font-size: 1em;
+    }
+
+    .hfGDLx .input-group-sm > .btn,
+    .hfGDLx .input-group-sm > .form-control,
+    .hfGDLx .input-group-sm > .form-select,
+    .hfGDLx .input-group-sm > .input-group-text {
+      padding-left: 0 0.25rem;
+    }
   }
 `;
 

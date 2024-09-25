@@ -71,6 +71,11 @@ h1.primary-2 {
     color: var(--h1-primary-color-2);
 }
 
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .btn {
     font-size: 1.290625em;
     font-weight: 500;

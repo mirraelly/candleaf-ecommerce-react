@@ -6,8 +6,8 @@ import CartItemsContainer from "./CartItemsContainer";
 
 const CartItems = ({ product }) => {
   return (
-    <CartItemsContainer className="px-2">
-      <section className="d-flex flex-column align-items-center justify-content-center py-5">
+    <CartItemsContainer className="px-2 pt-5">
+      <section className="d-flex flex-column align-items-center justify-content-center gap-3 pb-5">
         <h2>Your cart items</h2>
         <a
           href="#"
@@ -19,55 +19,89 @@ const CartItems = ({ product }) => {
       <Row className="justify-content-center g-0 order-1">
         <Col
           xs="12"
-          md=""
-          className="d-flex justify-content-between px-4 border-bottom border-top p-2"
+          md="12"
+          className="d-flex justify-content-between border-bottom"
         >
-          <p>Product</p>
-          <p>Price</p>
-          <p className="d-none d-md-block">Quantity</p>
-          <p className="d-none d-md-block">Total</p>
+          <Col xs="6" md="4" className="text-start">
+            <p className="d-none">Photo</p>
+            <p className="">Product</p>
+          </Col>
+          <Col xs="6" md="2">
+            <p className="text-end">Price</p>
+          </Col>
+          <Col md="2">
+            <p className="d-none d-md-block text-end">Quantity</p>
+          </Col>
+          <Col md="2">
+            <p className="d-none d-md-block text-end">Total</p>
+          </Col>
         </Col>
-        <Col xs="4" md="" className="d-flex align-items-center">
-          <figure className="image-box border-0">
-            <img
-              src={product.image}
-              alt="Image's product"
-              className="candle-image img-fluid cards-carts-images"
-            />
-          </figure>
-        </Col>
-        <Col xs="4" md="" className="d-flex align-items-center ">
-          <h4 className="product-title">{product.name} Candleaf®</h4>
-        </Col>
-        <Col
-          xs="4"
-          md=""
-          className="p d-flex align-items-center justify-content-end justify-content-md-center"
-        >
-          ${product.price}
-        </Col>
-        <Col xs="8" md="" className="d-flex justify-content-between">
-          <a
-            href="#"
-            className="stretched-link text-primary text-decoration-underline "
+        <Col xs="12" md="12" className="d-flex gap-md-0 gap-2 g-0">
+          <Col
+            xs="8"
+            md="6"
+            className="d-flex align-items-start pt-5 pb-3 g-0 gap-3"
           >
-            Remove
-          </a>
-          <Col>
-            <ProductsQuantity className="mb-3" />
+            <figure className="image-box border-0">
+              <img
+                src={product.image}
+                alt="Image's product"
+                className="candle-image img-fluid cards-carts-images"
+              />
+            </figure>
+            <div className="d-flex flex-column gap-3">
+              <h4 className="product-title fs-4 fw-medium">
+                {product.name} Candleaf®
+              </h4>
+              <a
+                href="#"
+                className="stretched-link text-primary text-decoration-underline"
+              >
+                Remove
+              </a>
+            </div>
+          </Col>
+          <Col
+            xs="4"
+            md="4"
+            className="p d-flex fx-5 fw-medium align-items-end align-items-md-center justify-content-start ps-md-4 pe-md-3 pe-2 py-md-5 pt-5 pb-4 text-md-start flex-column flex-md-row justify-content-md-between gap-md-0 cart-items-quality-divisor-col"
+          >
+            <div className="">${product.price}</div>
+            <div className="products-quantity-cart-page">
+              <p className="d-md-none d-block g-0 pb-1 my-0 text-center">Quality</p>
+              <ProductsQuantity
+                showTag={false}
+                className="mb-3 ps-5 show-product"
+              />
+              {/* no show tag label */}
+            </div>
+          </Col>
+          <Col
+            md="2"
+            className="text-end align-items-center justify-content-end fs-5 fw-medium d-md-flex d-none"
+          >
+            <p>$ 9.99</p>
           </Col>
         </Col>
       </Row>
-      <Row className="g-0 border-top p-2 order-2">
-        <div className="d-flex align-items-center justify-content-between">
-          <p>Sub-total</p>
-          <p>$ 9.99</p>
-        </div>
-        <p className="text-secondary">Tax and shipping cost will be calculated later</p>
+      <Row className="g-0 border-top px-2 pt-5 pb-5 pb-mb-0 order-2 mt-0 mb-5 mb-md-0 d-flex justify-content-md-end gap-md-5">
+        <Col md="5" xs="12">
+          <div className="d-flex flex-column justify-content-md-end pb-3">
+            <div className="d-flex align-items-center justify-content-evenly justify-content-md-end fw-medium gap-5 fs-5">
+              <p className="text-center">Sub-total</p>
+              <p className="text-center">$ 9.99</p>
+            </div>
+            <p className="text-secondary text-md-end text-center">
+              Tax and shipping cost will be calculated later
+            </p>
+          </div>
+        </Col>
+        <Col md="2" xs="12">
+          <Link to={"#"} className="w-100 btn btn-primary w-md-25">
+            Checkout
+          </Link>
+        </Col>
       </Row>
-      <Link to={"#"} className="w-100 btn btn-primary">
-        Checkout
-      </Link>
     </CartItemsContainer>
   );
 };
