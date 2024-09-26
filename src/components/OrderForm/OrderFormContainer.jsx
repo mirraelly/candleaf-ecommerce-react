@@ -21,6 +21,23 @@ const OrderFormContainer = styled.section`
   border-bottom: 1px solid #ccc; Linha inferior
 } */
 
+.text-p-font-size {
+  font-size: 0.875em;
+  font-family: 'Roboto', sans-serif;
+}
+
+input, select {
+  font-size: 0.875em;
+}
+
+.span-text-input {
+  vertical-align: text-top;
+}
+
+.form-check .form-check-input {
+  float: unset;
+}
+
  `;
 
 export default OrderFormContainer;
