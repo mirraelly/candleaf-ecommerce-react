@@ -1,7 +1,7 @@
 import PaymentConfirmed from "../../components/PaymentConfirmed";
 import SecondLayout from "../../layouts/SecondLayout";
 
-function PaymentConfirmedPage () {
+function ConfirmedPage () {
 
     return (
         <SecondLayout>
@@ -10,4 +10,4 @@ function PaymentConfirmedPage () {
     );
 }
 
-export default PaymentConfirmedPage;
+export default ConfirmedPage;

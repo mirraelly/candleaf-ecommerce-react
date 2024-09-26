@@ -9,7 +9,7 @@ import CartPage from "../pages/CartPage";
 import OrderPage from "../pages/OrderPage";
 import ShippingPage from "../pages/ShippingPage";
 import PaymentPage from "../pages/PaymentPage";
-import PaymentConfirmed from "../components/PaymentConfirmed";
+import ConfirmedPage from "../pages/ConfirmedPage"
 
 
 const routes = createBrowserRouter(
@@ -21,7 +21,7 @@ const routes = createBrowserRouter(
       <Route path="/order" element={<OrderPage />} />
       <Route path="/shipping" element={<ShippingPage />} />
       <Route path="/payment" element={<PaymentPage />} />
-      <Route path="/confirmed" element={< PaymentConfirmed />} />
+      <Route path="/confirmed" element={< ConfirmedPage />} />
    
     </>
   )
