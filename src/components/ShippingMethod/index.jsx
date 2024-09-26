@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { Col, FormGroup, Input, Label, Row } from "reactstrap";
-
 import { Container, Card, CardBody } from 'reactstrap';
+import ShippingMethodContainer from "./ShippingMethodContainer";
 
 const ShippingMethod = () => {
 
     return (
+        <ShippingMethodContainer >
         <Container className="mt-5 pb-5">
             <Col md="12">
                 <Card className="mb-5 border-primary border-opacity-25">
@@ -70,6 +71,7 @@ const ShippingMethod = () => {
                 </div>
             </Col>
         </Container >
+        </ShippingMethodContainer >
     );
 };
 
