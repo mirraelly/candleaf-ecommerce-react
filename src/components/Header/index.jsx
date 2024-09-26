@@ -31,16 +31,16 @@ const Header = () => {
                 <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar className='ms-2'>
                         <NavItem>
-                            <NavLink href='/discovery/' className='ms-2'>
+                            <NavLink href='/#discovery' className='ms-2' onClick={()=>setCollapsed(true)}>
                                 <i className="bi bi-chevron-down me-2" style={{ fontSize: '0.7rem' }}>
                                 </i>Discovery
                             </NavLink>
                         </NavItem>
                         <NavItem className='ms-4'>
-                            <NavLink href='/about/'>About</NavLink>
+                            <NavLink href='/#about' onClick={()=>setCollapsed(true)}>About</NavLink>
                         </NavItem>
                         <NavItem className='ms-4'>
-                            <NavLink href='/about/'>Contact Us</NavLink>
+                            <NavLink href='' onClick={()=>setCollapsed(true)}>Contact Us</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
