@@ -21,7 +21,7 @@ const Testimonials = () => {
                 <p>Some quotes from our happy customers</p>
             </section>
             <section className="py-5 d-flex justify-content-center">
-                <Row xs="1" md="4" className="g-4 d-none d-md-flex ">
+                <Row xs="1" md="4" className="g-4 g-md-1 d-none d-md-flex ">
                     {
                         testimonials.map((testimonial, index) => (
                             <Col key={index} md="4">
