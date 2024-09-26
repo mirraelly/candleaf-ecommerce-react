@@ -10,12 +10,12 @@ const ShippingMethod = () => {
             <Col md="12">
                 <Card className="mb-5 border-primary border-opacity-25">
                     <CardBody className="mx-2">
-                        <Row noGutters>
-                            <Col xs="3">
+                        <Row noGutters >
+                            <Col xs="2">
                                 <h6 className="mb-3 text-secondary">Contact</h6>
                             </Col>
-                            <Col xs="7">
-                                <span>joe.spagnuolo@uxbly.com</span>
+                            <Col xs="8">
+                                <span className="">joe.spagnuolo@uxbly.com</span>
                             </Col>
                             <Col xs="2" className="text-end">
                                 <Link to={'/order'} className="text-primary">
@@ -42,7 +42,7 @@ const ShippingMethod = () => {
                 </Card>
 
                 <h5 className="mb-4">Shipping method</h5>
-                <Card className="mb-5 border-primary border-opacity-25">
+                <Card className="mb-5 border-primary border-opacity-25 texts">
                     <CardBody >
                         <Row>
                             <Col xs="8">
