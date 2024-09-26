@@ -161,7 +161,7 @@ const Payment = () => {
         </Card>
 
         <div className="d-flex flex-column align-items-center gap-4 pt-5">
-          <Link to={"/payment"} className="w-100 btn btn-primary">
+          <Link to={"/confirmed"} className="w-100 btn btn-primary">
             Pay now
           </Link>
           <Link
