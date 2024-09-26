@@ -36,6 +36,10 @@ const CartItemsContainer = styled.section`
     font-size: 1.3em;
   }
 
+  .eCScRG .quantity-box {
+    z-index: 2;
+  }
+
   .form-control {
     line-height: 1.5;
   }
