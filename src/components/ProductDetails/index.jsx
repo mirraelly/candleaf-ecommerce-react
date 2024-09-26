@@ -87,11 +87,11 @@ const ProductDetails = ({ product }) => {
               <Col xs="12" md="12" className="order-md-2 order-1">
                 <Col xs="12" md="12" className="">
                   <div className="d-flex flex-column flex-md-row">
-                    <div className="d-flex flex-md-column my-3 w-50 gap-md-4 gap-5">
+                    <div className="d-flex flex-md-column my-3 w-50 gap-md-4 gap-md-5 div-divider-quantity-value">
                       <p className="d-flex align-items-center products-price text-primary h4">
                         ${product.price}
                       </p>
-                      <ProductsQuantity className="" />
+                      <ProductsQuantity showTag={true} className="pe-5" />
                     </div>
                     <div className="d-flex flex-column align-items-stretch py-2 gap-0">
                       <FormGroup

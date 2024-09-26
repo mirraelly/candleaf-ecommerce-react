@@ -80,6 +80,10 @@ const ProductDetailsContainer = styled.main`
       overflow: visible;
       object-position: 0px 40px;
     }
+
+    .div-divider-quantity-value {
+      gap: 7em;
+    }
   }
 `;
 
