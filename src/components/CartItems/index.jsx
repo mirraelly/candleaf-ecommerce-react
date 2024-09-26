@@ -3,18 +3,27 @@ import ProductsQuantity from "../ProductsQuantity";
 import { Col, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 import CartItemsContainer from "./CartItemsContainer";
+import { useNavigate } from 'react-router-dom';
+
 
 const CartItems = ({ product }) => {
+
+  const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('#discovery');
+      };
+
   return (
     <CartItemsContainer className="px-2 pt-5">
       <section className="d-flex flex-column align-items-center justify-content-center gap-3 pb-5">
         <h2>Your cart items</h2>
-        <a
-          href="#"
-          className="stretched-link text-primary text-decoration-underline"
+        <Link
+          to="/"
+          className="stretched-link text-primary text-decoration-underline z-2" onClick={ handleClick }
         >
           Back to shopping
-        </a>
+        </Link>
       </section>
       <Row className="justify-content-center g-0 order-1">
         <Col

@@ -158,7 +158,7 @@ const ProductDetails = ({ product }) => {
                           </div>
                         </Label>
                       </FormGroup>
-                      <Link to={"/cart"} className="w-100 btn btn-primary mt-md-4 mt-2">
+                      <Link to="/cart" className="w-100 btn btn-primary mt-md-4 mt-2">
                         <i className="bi bi-cart pe-2"></i> + Add to cart
                       </Link>
                     </div>
