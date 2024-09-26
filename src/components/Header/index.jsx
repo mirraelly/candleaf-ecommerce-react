@@ -32,14 +32,14 @@ const Header = () => {
           <NavItem>
             <NavLink
               href="/#discovery"
-              className="ms-2"
+              className=""
               onClick={() => setCollapsed(true)}
             >
-              <i
-                className="bi bi-chevron-down me-2"
-                style={{ fontSize: "0.7rem" }}
-              ></i>
               Discovery
+              <i
+                className="bi bi-chevron-down ms-2"
+                style={{ fontSize: "0.9rem", color: "black" }}
+              ></i>
             </NavLink>
           </NavItem>
           <NavItem className="ms-4">
