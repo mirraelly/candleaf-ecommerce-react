@@ -97,7 +97,7 @@ const CartItems = ({ product }) => {
           </div>
         </Col>
         <Col md="2" xs="12">
-          <Link to={"#"} className="w-100 btn btn-primary w-md-25">
+          <Link to={"/order"} className="w-100 btn btn-primary w-md-25">
             Checkout
           </Link>
         </Col>

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import SecondLayoutContainer from "./SecondLayoutContainer";
 import SecondaryHeader from "../../components/SecondaryHeader";
 import OrderSummary from "../../components/OrderSummary";
-import { Col, Row } from "reactstrap";
 
 const LayoutSecondary = ({ children, className }) => {
   return (
@@ -23,6 +22,7 @@ const LayoutSecondary = ({ children, className }) => {
 LayoutSecondary.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  product: PropTypes.object.isRequired
 };
 
 export default LayoutSecondary;
