@@ -17,17 +17,17 @@ import { BsLockFill, BsInfoSquareFill } from "react-icons/bs";
 const Payment = () => {
   return (
     <Container className="mt-5 pb-5">
-      <Col md="6">
+      <Col md="12">
         <Card className="mb-5 border-primary border-opacity-25">
-          <CardBody className="mx-2">
+          <CardBody className="">
             <Row>
-              <Col xs="2">
+              <Col xs="2" md='2'>
                 <h6 className="mb-3 text-secondary">Contact</h6>
               </Col>
-              <Col xs="8">
+              <Col xs="8" md='8'>
                 <span>joe.spagnuolo@uxbly.com</span>
               </Col>
-              <Col xs="2" className="text-end">
+              <Col xs="2" md='2' className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>
@@ -35,15 +35,15 @@ const Payment = () => {
 
               <hr className="border-primary border-opacity-50" />
 
-              <Col xs="2">
+              <Col xs="2" md='2'>
                 <h6 className="mb-3 text-secondary">Ship to</h6>
               </Col>
-              <Col xs="8">
+              <Col xs="8" md='8' className="fs-6">
                 <span>
                   Via Firenze 23, 92023, Campobello di Licata AG, Itália
                 </span>
               </Col>
-              <Col xs="2" className="text-end">
+              <Col xs="2"  md='2' className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>
@@ -51,16 +51,16 @@ const Payment = () => {
 
               <hr className="border-primary border-opacity-50" />
 
-              <Col xs="2">
+              <Col xs="2" md='2'>
                 <h6 className="text-secondary">Method</h6>
               </Col>
-              <Col xs="8">
+              <Col xs="8" md='6'>
                 <span>
                   Standard Shipping
                   <span className="fw-light"> - FREE</span>
                 </span>
               </Col>
-              <Col xs="2" className="text-end">
+              <Col xs="2"  md='3' className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>

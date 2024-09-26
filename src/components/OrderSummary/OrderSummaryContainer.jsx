@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const OrderSummaryContainer = styled.section`
-width: 100%;
 max-height: 51.25em;
 
 .rigth-order-summary-section,

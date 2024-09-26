@@ -11,7 +11,7 @@ import Cart from "../Cart/index";
 import PropTypes from "prop-types";
 import ProductsData from "../../db/ProductData";
 
-const OrderSummaryAccordion = ({ className }) => {
+const OrderSummaryAccordion = ({className}) => {
   const product = ProductsData.find((p) => p.id == 1);
   const [open, setOpen] = useState("1");
   const toggle = (id) => {

@@ -6,7 +6,7 @@ const OrderForm = () => {
 
     return (
         <OrderFormContainer className="container my-5">
-            <Col md="6">
+            <Col md="12">
                 <div className="d-flex justify-content-between align-items-center">
                     <h3 className="mb-4">Contact</h3>
                     <div className="d-flex gap-1">

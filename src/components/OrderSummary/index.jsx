@@ -8,8 +8,8 @@ const OrderSummary = ({ className }) => {
   return (
     <OrderSummaryContainer className={`${className} mt-2`}>
       <Col
-        md="6"
-        className="d-none d-md-block rigth-order-summary-section py-5 pe-5"
+        md="12"
+        className="rigth-order-summary-section py-5 pe-5"
       >
         <section className="pe-5 me-5">
           <Table className="mx-5">

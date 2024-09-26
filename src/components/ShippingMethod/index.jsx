@@ -7,10 +7,10 @@ const ShippingMethod = () => {
 
     return (
         <Container className="mt-5 pb-5">
-            <Col md="6">
+            <Col md="12">
                 <Card className="mb-5 border-primary border-opacity-25">
                     <CardBody className="mx-2">
-                        <Row>
+                        <Row noGutters>
                             <Col xs="3">
                                 <h6 className="mb-3 text-secondary">Contact</h6>
                             </Col>
