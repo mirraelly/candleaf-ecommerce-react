@@ -8,6 +8,9 @@ top: 0;
 right: 0;
 left: 0;
 
+.nav-link {
+    color: black;
+}
  `;
 
 export default HeaderContainer;
