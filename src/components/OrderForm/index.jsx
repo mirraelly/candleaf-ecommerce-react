@@ -66,10 +66,10 @@ const OrderForm = () => {
                         </Label>
                     </FormGroup>
                     <div className="d-flex flex-column align-items-center gap-3 pt-4">
-                        <Link to={'#'} className="w-100 btn btn-primary">
+                        <Link to={'/shipping'} className="w-100 btn btn-primary">
                             Go to shipping
                         </Link>
-                        <Link to={'#'} className="w-100 text-primary text-decoration-underline d-flex justify-content-center">
+                        <Link to={'/cart'} className="w-100 text-primary text-decoration-underline d-flex justify-content-center">
                             Back to cart
                         </Link>
                     </div>

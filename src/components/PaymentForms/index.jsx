@@ -21,13 +21,13 @@ const Payment = () => {
         <Card className="mb-5 border-primary border-opacity-25">
           <CardBody className="">
             <Row>
-              <Col xs="2" md='2'>
+              <Col xs="2" md="2">
                 <h6 className="mb-3 text-secondary">Contact</h6>
               </Col>
-              <Col xs="8" md='8'>
+              <Col xs="8" md="8">
                 <span>joe.spagnuolo@uxbly.com</span>
               </Col>
-              <Col xs="2" md='2' className="text-end">
+              <Col xs="2" md="2" className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>
@@ -35,15 +35,15 @@ const Payment = () => {
 
               <hr className="border-primary border-opacity-50" />
 
-              <Col xs="2" md='2'>
+              <Col xs="2" md="2">
                 <h6 className="mb-3 text-secondary">Ship to</h6>
               </Col>
-              <Col xs="8" md='8' className="fs-6">
+              <Col xs="8" md="8" className="fs-6">
                 <span>
                   Via Firenze 23, 92023, Campobello di Licata AG, Itália
                 </span>
               </Col>
-              <Col xs="2"  md='2' className="text-end">
+              <Col xs="2" md="2" className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>
@@ -51,16 +51,16 @@ const Payment = () => {
 
               <hr className="border-primary border-opacity-50" />
 
-              <Col xs="2" md='2'>
+              <Col xs="2" md="2">
                 <h6 className="text-secondary">Method</h6>
               </Col>
-              <Col xs="8" md='6'>
+              <Col xs="8" md="6">
                 <span>
                   Standard Shipping
                   <span className="fw-light"> - FREE</span>
                 </span>
               </Col>
-              <Col xs="2"  md='3' className="text-end">
+              <Col xs="2" md="3" className="text-end">
                 <Link to={"/order"} className="text-primary">
                   Edit
                 </Link>
@@ -104,25 +104,25 @@ const Payment = () => {
 
               <div className="d-flex gap-3">
                 <FormGroup className="w-50">
-                    <Input
-                      id="expiration"
-                      name="expiration"
-                      placeholder="Expiration (MM/YY)"
-                      type="text"
-                    />
-                  
+                  <Input
+                    id="expiration"
+                    name="expiration"
+                    placeholder="Expiration (MM/YY)"
+                    type="text"
+                  />
                 </FormGroup>
                 <FormGroup className="w-50">
-                <InputGroup>
-                  <Input
-                    id="cvv"
-                    name="cvv"
-                    placeholder="CVV"
-                    type="password"
-                    className="border-end-0"
-                  />
+                  <InputGroup>
+                    <Input
+                      id="cvv"
+                      name="cvv"
+                      placeholder="CVV"
+                      type="password"
+                      className="border-end-0"
+                    />
                     <InputGroupText className="bg-white">
-                      <BsInfoSquareFill className="text-secondary"/> {/* Ícon */}
+                      <BsInfoSquareFill className="text-secondary" />{" "}
+                      {/* Ícon */}
                     </InputGroupText>
                   </InputGroup>
                 </FormGroup>
@@ -161,14 +161,14 @@ const Payment = () => {
         </Card>
 
         <div className="d-flex flex-column align-items-center gap-4 pt-5">
-          <Link to={"/order"} className="w-100 btn btn-primary">
-            Go to payment
+          <Link to={"/payment"} className="w-100 btn btn-primary">
+            Pay now
           </Link>
           <Link
-            to={"/order"}
+            to={"/shipping"}
             className="w-100 text-primary text-decoration-underline d-flex justify-content-center"
           >
-            Back to details
+            Back to shipping
           </Link>
         </div>
       </Col>

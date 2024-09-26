@@ -61,7 +61,7 @@ const ShippingMethod = () => {
                 </Card>
 
                 <div className="d-flex flex-column align-items-center gap-4 pt-5">
-                    <Link to={'/order'} className="w-100 btn btn-primary">
+                    <Link to={'/payment'} className="w-100 btn btn-primary">
                         Go to payment
                     </Link>
                     <Link to={'/order'} className="w-100 text-primary text-decoration-underline d-flex justify-content-center">
