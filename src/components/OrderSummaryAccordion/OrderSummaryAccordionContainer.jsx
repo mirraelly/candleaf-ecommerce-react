@@ -63,6 +63,16 @@ const OrderSummaryAccordionContainer = styled.section`
     .accordion {
       --bs-accordion-btn-padding-x: 0;
     }
+    .accordion-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.25em; 
+      letter-spacing: -0.9px;
+      font-weight: 400;
+    }
+    .accordion-body {
+      --bs-accordion-body-padding-x: 0.8em;
+    
+    }
   }
 `;
 

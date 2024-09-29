@@ -13,7 +13,7 @@ import ProductsData from "../../db/ProductData";
 
 const OrderSummaryAccordion = ({className}) => {
   const product = ProductsData.find((p) => p.id == 1);
-  const [open, setOpen] = useState("1");
+  const [open, setOpen] = useState("0");
   const toggle = (id) => {
     if (open === id) {
       setOpen();
@@ -29,7 +29,7 @@ const OrderSummaryAccordion = ({className}) => {
           <AccordionItem className="pe-2 ps-3">
             <AccordionHeader targetId="1" className="d-flex">
               <Cart />
-              <span className="text-primary d-flex fw-normal fs-4 ps-1">
+              <span className="text-primary d-flex fw-normal fs-4 ps-1 accordion-title">
                 See your order details
                 {/* <div className={`${open == '1' ? '' : 'collapsed'} accordion-expander`}></div> */}
                 <span className="ms-3 fw-normal">
