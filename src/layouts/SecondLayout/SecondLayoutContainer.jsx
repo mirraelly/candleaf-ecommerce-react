@@ -1,20 +1,17 @@
 import styled from "styled-components";
 
 const SecondLayoutContainer = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-left: 1em;
-
-  .second-layout-main {
-    padding: 1em 8em;
+  .left-secondlayout {
+    padding-left: 8em;
+    padding-right: 5em;
   }
 
-  @media screen and (max-width: 800px) {
-    padding-left: 0;
-    .second-layout-main {
-      padding: 0;
-    }
+  .rigth-secondlayout {
+    padding-right: 8em;
+  }
+
+  .color {
+    background-color: #f2f2f2;
   }
 `;
 

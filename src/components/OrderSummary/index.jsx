@@ -6,7 +6,7 @@ import ProductsData from "../../db/ProductData";
 const OrderSummary = ({ className }) => {
   const product = ProductsData.find((p) => p.id == 1);
   return (
-    <OrderSummaryContainer className={`${className} mt-2`}>
+    <OrderSummaryContainer className={`${className}`}>
       <Col
         md="12"
         className="rigth-order-summary-section py-5 pe-5"
