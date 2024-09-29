@@ -8,7 +8,7 @@ const ProductsCard = ({ product }) => {
         <ProductsCardContainer>
             <Col className=''>
                 <Link to={`product/${product.id}`}>
-                    <Card className='products-card border-0 my-3 mx-1'>
+                    <Card className='products-card border-0 rounded-0 my-2 my-md-3 mx-1'>
                         <div className='d-flex justify-content-center'>
                             <img src={product.image} alt="Image's product" />
                         </div>
