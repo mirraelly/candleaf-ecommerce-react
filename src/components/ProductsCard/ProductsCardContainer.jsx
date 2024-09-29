@@ -14,6 +14,14 @@ const ProductsCardContainer = styled.div`
     font-weight: 600;
   }
 
+  img {
+      object-position: center -1.5em;
+      object-fit: cover;
+      transform: scale(1.1);
+      height: 9.2em;
+      width: 23em;
+    }
+
   .products-price {
     font-size: 1.0625em;
     font-weight: 500;

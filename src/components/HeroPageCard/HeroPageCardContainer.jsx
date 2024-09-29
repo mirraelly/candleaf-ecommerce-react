@@ -18,11 +18,10 @@ margin: 14em 20em;
     line-height: 1.225em; 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     padding: 2em 0.8em 3em 0.8em;
     margin: 13em auto;
   }
-
 
 
  `;
