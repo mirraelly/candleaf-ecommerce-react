@@ -17,13 +17,13 @@ const Popular = () => {
                 <p className='text-secondary'>Our top selling product that you may like</p>
             </section>
             <section className="">
-                <Row xs="1" md="4" className="g-4 py-3">
+                <Row xs="1" md="2" lg="4" sm="2" className="g-4 py-3">
                     {products.slice(0, 4).map((product, index) => (
                         <ProductsCard key={index} product={product} />
                     ))}
                 </Row>
                 
-                <Row xs="1" md="4" className="g-4 d-md-none py-3">
+                <Row xs="1" md="2" lg="4" sm="2" className="g-4 d-md-none py-3">
                     {
                         products.slice(4, showMore ? products.length : 0).map((product, index) => (
                             <ProductsCard key={index} product={product} />

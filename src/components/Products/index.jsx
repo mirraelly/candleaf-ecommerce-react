@@ -19,13 +19,13 @@ const Products = () => {
                 <h1 className="mt-5 primary-2">Products</h1>
                 <p className="text-muted my-2 subtitle-products text-secondary">Order it for you or for your beloved ones</p>
             </section>
-            <section className="my-5">
-                <Row xs="1" md="4" className="g-0 g-md-4">
+            <section className="my-5 produtcs-section">
+                <Row xs="1" md="2" lg="4" sm="2"  className="g-0 g-md-4">
                     {products.slice(0, showMore ? products.length : 4).map((product, index) => (
                         <ProductsCard key={index} product={product} />
                     ))}
                 </Row>
-                <Row xs="1" md="4" className="g-4 d-none d-md-flex">
+                <Row xs="1" md="2" lg="4" sm="2" className="g-4 d-none d-md-flex">
                     {
                         products.slice(-4).map((product, index) => (
                             <ProductsCard key={index} product={product} />
