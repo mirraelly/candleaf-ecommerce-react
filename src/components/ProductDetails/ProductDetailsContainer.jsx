@@ -69,6 +69,24 @@ const ProductDetailsContainer = styled.main`
     font-weight: 500;
   }
 
+  .option-container {
+    padding-left: 2.5em;
+  }
+
+  .purchase-option {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    letter-spacing: -0.9px;
+  }
+
+  .purchase-option-2 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 0.975em;
+    padding: 0 1em 0 1em;
+  }
+
   @media screen and (max-width: 800px) {
     .image-box {
       max-width: 21.625em;

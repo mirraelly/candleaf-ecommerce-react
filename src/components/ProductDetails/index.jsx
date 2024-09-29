@@ -88,7 +88,7 @@ const ProductDetails = ({ product }) => {
                 <Col xs="12" md="12" className="">
                   <div className="d-flex flex-column flex-md-row">
                     <div className="d-flex flex-md-column my-3 w-50 gap-md-4 gap-md-5 div-divider-quantity-value">
-                      <p className="d-flex align-items-center products-price text-primary h4">
+                      <p className="d-flex align-items-center products-price text-primary h4 ps-1 ps-md-0">
                         ${product.price}
                       </p>
                       <ProductsQuantity showTag={true} className="pe-5" />
@@ -96,69 +96,84 @@ const ProductDetails = ({ product }) => {
                     <div className="d-flex flex-column align-items-stretch py-2 gap-0">
                       <FormGroup
                         check
-                        className={`mb-3 text-start py-1 ${
+                        className={`mb-3 text-start py-1 option-container ${
                           selectedOption === "one-time"
                             ? "selected-option"
                             : "option"
                         }`}
                       >
+                        <Input
+                          className="text-start border-3"
+                          type="radio"
+                          name="purchaseOptions"
+                          checked={selectedOption === "one-time"}
+                          onChange={() => setSelectedOption("one-time")}
+                        />
                         <Label
                           check
                           className="form-check-label text-start d-flex justify-content-star gap-2"
                         >
-                          <Input
-                            className="text-start"
-                            type="radio"
-                            name="purchaseOptions"
-                            checked={selectedOption === "one-time"}
-                            onChange={() => setSelectedOption("one-time")}
-                          />
-                          One time purchase
+                          <span className="purchase-option">
+                            One time purchase
+                          </span>
                         </Label>
                       </FormGroup>
-                      <FormGroup
-                        check
-                        className={`mb-3 text-start py-1 ${
+                      <div
+                        className={
                           selectedOption === "subscribe"
                             ? "selected-option"
                             : "option"
-                        }`}
+                        }
                       >
-                        <Label
+                        <FormGroup
                           check
-                          className="form-check-label d-flex justify-content-star gap-2 align-self-stretch"
+                          className="text-start py-2 py-md-1 option-container"
                         >
+                          {" "}
                           <Input
+                            className="border-3"
                             type="radio"
                             name="purchaseOptions"
                             checked={selectedOption === "subscribe"}
                             onChange={() => setSelectedOption("subscribe")}
                           />
-                          <div className="d-flex flex-column gap-2 weeks-select-box py-2 text-start justify-content-star">
-                            <div className="d-flex gap-2 align-self-baseline text-start">
-                              <p>Subscribe and delivery every</p>
-                              <select
-                                name="delivery"
-                                id="delivery"
-                                className="weeks-select"
-                              >
-                                <option value="2">2 weeks</option>
-                                <option value="4">4 weeks</option>
-                                <option value="6">6 weeks</option>
-                              </select>
+                          <Label
+                            check
+                            className="form-check-label flex-column d-flex justify-content-start gap-2 align-self-stretch"
+                          >
+                            <div className="d-flex flex-column gap-2 weeks-select-box py-0 py-md-2 text-start justify-content-start">
+                              <div className="d-flex gap-2 align-self-baseline text-start">
+                                <span className="purchase-option">
+                                  Subscribe and delivery every
+                                </span>
+                                <select
+                                  name="delivery"
+                                  id="delivery"
+                                  className="weeks-select ms-2"
+                                >
+                                  <option value="2" className="ms-2">2 weeks</option>
+                                  <option value="4">4 weeks</option>
+                                  <option value="6">6 weeks</option>
+                                </select>
+                              </div>
                             </div>
-                            <p className="text-secondary">
-                              Subscribe now and get the 10% discount on every
-                              recurring order. The discount will be applied at
-                              checkout.  
-                              <a href="#details" className="text-primary">
-                                {''} See details
-                              </a>
-                            </p>
-                          </div>
-                        </Label>
-                      </FormGroup>
-                      <Link to="/cart" className="w-100 btn btn-primary mt-md-4 mt-2">
+                          </Label>
+                        </FormGroup>
+                        <div>
+                          <p className="text-secondary purchase-option-2 text-start">
+                            Subscribe now and get the 10% discount on every
+                            recurring order. The discount will be applied at
+                            checkout.
+                            <a href="#details" className="text-primary fw-light">
+                              {""} See details
+                            </a>
+                          </p>
+                        </div>
+                      </div>
+                      <Link
+                        to="/cart"
+                        className="w-100 btn btn-primary mt-md-4 mt-4"
+                      >
                         <i className="bi bi-cart pe-2"></i> + Add to cart
                       </Link>
                     </div>

@@ -22,6 +22,7 @@ const Testimonials = () => {
             </section>
             <section className="py-5 d-flex justify-content-center">
                 <Row xs="1" md="4" className="g-4 g-md-1 d-none d-md-flex ">
+                       {/* xs="1" md="2" lg="4" sm="2" */}
                     {
                         testimonials.map((testimonial, index) => (
                             <Col key={index} md="4">
