@@ -97,10 +97,10 @@ const CartItems = ({ product }) => {
         <Col md="5" xs="12">
           <div className="d-flex flex-column justify-content-md-end pb-3">
             <div className="d-flex align-items-center justify-content-evenly justify-content-md-end fw-medium gap-5 fs-5">
-              <p className="text-center">Sub-total</p>
-              <p className="text-center">$ 9.99</p>
+              <p className="text-center text-sub-total">Sub-total</p>
+              <p className="text-center text-sub-total">$ 9.99</p>
             </div>
-            <p className="text-secondary text-md-end text-center">
+            <p className="text-secondary text-md-end text-center text-p">
               Tax and shipping cost will be calculated later
             </p>
           </div>

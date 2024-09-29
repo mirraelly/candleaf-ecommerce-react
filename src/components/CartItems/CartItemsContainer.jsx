@@ -53,6 +53,20 @@ const CartItemsContainer = styled.section`
     .products-quantity-cart-page {
         width: unset;
     }
+
+    .text-sub-total {
+      letter-spacing: -0.9px;
+      font-size: 1.25em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+    }
+
+    .text-p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      letter-spacing: -0.9px;
+      font-weight: 400; 
+    }
   }
 `;
 
