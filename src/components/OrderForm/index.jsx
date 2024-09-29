@@ -7,7 +7,7 @@ const OrderForm = () => {
     <OrderFormContainer className="container my-5">
       <Col md="12">
         <div className="d-flex justify-content-between align-items-center">
-          <h3 className="mb-4">Contact</h3>
+          <h3 className="mb-4 form-title">Contact</h3>
           <div className="d-flex gap-1 fw-medium">
             <p className="text-p-font-size">Do you have an account? </p>
             <a href="#" className="text-primary text-p-font-size">
@@ -36,7 +36,7 @@ const OrderForm = () => {
               </span>
             </Label>
           </FormGroup>
-          <h3 className="mt-5">Shipping Address</h3>
+          <h3 className="mt-5 form-title">Shipping Address</h3>
           <FormGroup>
             <Input type="text" name="name" id="name" placeholder="Name" />
           </FormGroup>

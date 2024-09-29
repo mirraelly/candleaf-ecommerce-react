@@ -21,6 +21,13 @@ const OrderFormContainer = styled.section`
   border-bottom: 1px solid #ccc; Linha inferior
 } */
 
+  .form-title {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.9px;
+    font-weight: 500;
+    font-size: 1.25em;
+  }
+
 .text-p-font-size {
   font-size: 0.875em;
   font-family: 'Roboto', sans-serif;
