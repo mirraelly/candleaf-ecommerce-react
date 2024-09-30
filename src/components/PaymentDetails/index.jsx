@@ -5,7 +5,7 @@ const PaymentDetails = () => {
 
     return (
         <>
-            <Row>
+            <Row noGutters>
                 < PaymentForms />
             </Row>
         </>

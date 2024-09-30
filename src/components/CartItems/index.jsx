@@ -94,7 +94,7 @@ const CartItems = ({ product }) => {
         </Col>
       </Row>
       <Row className="g-0 border-top px-2 pt-5 pb-5 pb-mb-0 order-2 mt-0 mb-5 mb-md-0 d-flex justify-content-md-end gap-md-5">
-        <Col md="5" xs="12">
+        <Col md="6" xs="12">
           <div className="d-flex flex-column justify-content-md-end pb-3">
             <div className="d-flex align-items-center justify-content-evenly justify-content-md-end fw-medium gap-5 fs-5">
               <p className="text-center text-sub-total">Sub-total</p>
@@ -106,8 +106,8 @@ const CartItems = ({ product }) => {
           </div>
         </Col>
         <Col md="2" xs="12">
-          <Link to={"/order"} className="w-100 btn btn-primary w-md-25">
-            Checkout
+          <Link to={"/order"} className="w-100 btn btn-primary">
+            Check-out
           </Link>
         </Col>
       </Row>
