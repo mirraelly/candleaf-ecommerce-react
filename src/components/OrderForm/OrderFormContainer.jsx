@@ -6,7 +6,11 @@ const OrderFormContainer = styled.section`
   .form-control,
   .form-select {
     border-radius: initial;
-    border-color: #898989;
+    /* border-color: #898989; */
+  }
+
+  .color-grey {
+    border: 0.25px solid var(--bd-border-form-grey);
   }
 
   /* .custom-select {

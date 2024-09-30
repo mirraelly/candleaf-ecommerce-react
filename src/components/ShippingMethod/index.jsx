@@ -48,7 +48,7 @@ const ShippingMethod = () => {
           </Card>
 
           <h5 className="mb-4">Shipping method</h5>
-          <Card className="mb-5 border-primary border-opacity-25 texts">
+          <Card className="mb-5 color-grey border-opacity-25 texts">
             <CardBody>
               <Row>
                 <Col xs="8">

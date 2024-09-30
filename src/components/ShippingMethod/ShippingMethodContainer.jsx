@@ -20,6 +20,10 @@ const ShippingMethodContainer = styled.section`
     display: none;
   }
 
+  .color-grey {
+    border-color: var(--bd-border-form-grey);
+  }
+
   @media (max-width: 800px) {
     br.hide {
     display: block;

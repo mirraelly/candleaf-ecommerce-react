@@ -40,7 +40,7 @@ const OrderForm = () => {
           <h3 className="mt-5 form-title">Shipping Address</h3>
           <div className="d-md-flex justify-content-between gap-md-2">
             <FormGroup className="w-100">
-              <Input type="text" name="name" id="name" placeholder="Name" />
+              <Input type="text" name="name" id="name" placeholder="Name" className="color-grey" />
             </FormGroup>
             <FormGroup className="w-100">
               <Input
@@ -48,6 +48,7 @@ const OrderForm = () => {
                 name="secondName"
                 id="secondName"
                 placeholder="Second name"
+                className="color-grey"
               />
             </FormGroup>
           </div>
@@ -58,6 +59,7 @@ const OrderForm = () => {
               name="address"
               id="address"
               placeholder="Address and number"
+              className="color-grey"
             />
           </FormGroup>
           <FormGroup>
@@ -66,6 +68,7 @@ const OrderForm = () => {
               name="city"
               id="city"
               placeholder="Shipping note (optional)"
+              className="color-grey"
             />
           </FormGroup>
           <div className="d-md-flex justify-content-between gap-md-2 flex-nowrap ">
@@ -75,6 +78,7 @@ const OrderForm = () => {
                 name="postalCode"
                 id="postalCode"
                 placeholder="Postal code"
+                className="color-grey"
               />
             </FormGroup>
             <FormGroup className="order-1">
@@ -83,6 +87,7 @@ const OrderForm = () => {
                 name="province"
                 id="province"
                 placeholder="City"
+                className="color-grey"
               />
             </FormGroup>
             <FormGroup className="form-floating order-3" floating>
@@ -91,7 +96,8 @@ const OrderForm = () => {
                 name="province"
                 type="select"
                 bsSize="sm"
-                className="custom-select"
+                className="custom-select color-grey"
+                
               >
                 <option value="" className="d-none d-md-block sm">
                   Province
@@ -111,7 +117,7 @@ const OrderForm = () => {
               name="country"
               type="select"
                bsSize="sm"
-              className="custom-select"
+              className="custom-select color-grey"
             >
               <option value="">Italy</option>
               <option> 1 </option>
