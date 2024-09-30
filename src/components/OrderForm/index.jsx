@@ -85,15 +85,20 @@ const OrderForm = () => {
                 placeholder="City"
               />
             </FormGroup>
-            <FormGroup className="form-floating order-3">
+            <FormGroup className="form-floating order-3" floating>
               <Input
                 id="province"
                 name="province"
                 type="select"
+                bsSize="sm"
                 className="custom-select"
               >
-                <option value="" className="d-block d-md-none">Province</option>
-                <option value="" className="d-none d-md-block">Select your province</option>
+                <option value="" className="d-none d-md-block sm">
+                  Province
+                </option>
+                <option value="" className="d-block d-md-none sm">
+                  Select your province
+                </option>
                 <option> 1 </option>
                 <option> 2 </option>
               </Input>
@@ -105,6 +110,7 @@ const OrderForm = () => {
               id="country"
               name="country"
               type="select"
+               bsSize="sm"
               className="custom-select"
             >
               <option value="">Italy</option>
