@@ -10,15 +10,15 @@ const ShippingMethod = () => {
         <Container className="mt-5 pb-5">
             <Col md="12">
                 <Card className="mb-5 border-primary border-opacity-25">
-                    <CardBody className="mx-2">
-                        <Row noGutters >
-                            <Col xs="2">
-                                <h6 className="mb-3 text-secondary">Contact</h6>
+                    <CardBody className="mx-0">
+                        <Row noGutters>
+                            <Col xs="3"  md="2">
+                                <h6 className="mb-3 text-secondary text-font-size">Contact</h6>
                             </Col>
-                            <Col xs="8">
+                            <Col xs="8"  md="9">
                                 <span className="">joe.spagnuolo@uxbly.com</span>
                             </Col>
-                            <Col xs="2" className="text-end">
+                            <Col xs="1" className="text-end">
                                 <Link to={'/order'} className="text-primary">
                                     Edit
                                 </Link>
@@ -26,14 +26,14 @@ const ShippingMethod = () => {
 
                             <hr className="border-primary border-opacity-50"/>
 
-                            <Col xs="3">
-                                <h6 className="mb-3 text-secondary">Ship to</h6>
+                            <Col xs="3" md="2">
+                                <h6 className="mb-3 text-secondary text-font-size">Ship to</h6>
                             </Col>
-                            <Col xs="7">
-                                <span>Via Firenze 23, 92023, Campobello <br />
+                            <Col xs="8" md="9">
+                                <span>Via Firenze 23, 92023, Campobello <br className="hide"/>
                                     di Licata AG, Itália
                                 </span></Col>
-                            <Col xs="2" className="text-end">
+                            <Col xs="1" className="text-end">
                                 <Link to={'/order'} className="text-primary">
                                     Edit
                                 </Link>
@@ -45,7 +45,7 @@ const ShippingMethod = () => {
                 <h5 className="mb-4">Shipping method</h5>
                 <Card className="mb-5 border-primary border-opacity-25 texts">
                     <CardBody >
-                        <Row>
+                        <Row >
                             <Col xs="8">
                                 <FormGroup check>
                                     <Label check>
