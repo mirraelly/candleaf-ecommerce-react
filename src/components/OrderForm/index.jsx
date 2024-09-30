@@ -36,18 +36,22 @@ const OrderForm = () => {
               </span>
             </Label>
           </FormGroup>
+
           <h3 className="mt-5 form-title">Shipping Address</h3>
-          <FormGroup>
-            <Input type="text" name="name" id="name" placeholder="Name" />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              type="text"
-              name="secondName"
-              id="secondName"
-              placeholder="Second name"
-            />
-          </FormGroup>
+          <div className="d-md-flex justify-content-between gap-md-2">
+            <FormGroup className="w-100">
+              <Input type="text" name="name" id="name" placeholder="Name" />
+            </FormGroup>
+            <FormGroup className="w-100">
+              <Input
+                type="text"
+                name="secondName"
+                id="secondName"
+                placeholder="Second name"
+              />
+            </FormGroup>
+          </div>
+
           <FormGroup>
             <Input
               type="text"
@@ -64,35 +68,38 @@ const OrderForm = () => {
               placeholder="Shipping note (optional)"
             />
           </FormGroup>
-          <FormGroup>
-            <Input
-              type="text"
-              name="postalCode"
-              id="postalCode"
-              placeholder="Postal code"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              type="text"
-              name="province"
-              id="province"
-              placeholder="City"
-            />
-          </FormGroup>
-          <FormGroup className="form-floating ">
-            <Input
-              id="province"
-              name="province"
-              type="select"
-              className="custom-select"
-            >
-              <option value="">Select your province</option>
-              <option> 1 </option>
-              <option> 2 </option>
-            </Input>
-            <Label for="floatingProvince">Province</Label>
-          </FormGroup>
+          <div className="d-md-flex justify-content-between gap-md-2 flex-nowrap ">
+            <FormGroup className="order-2">
+              <Input
+                type="text"
+                name="postalCode"
+                id="postalCode"
+                placeholder="Postal code"
+              />
+            </FormGroup>
+            <FormGroup className="order-1">
+              <Input
+                type="text"
+                name="province"
+                id="province"
+                placeholder="City"
+              />
+            </FormGroup>
+            <FormGroup className="form-floating order-3">
+              <Input
+                id="province"
+                name="province"
+                type="select"
+                className="custom-select"
+              >
+                <option value="" className="d-block d-md-none">Province</option>
+                <option value="" className="d-none d-md-block">Select your province</option>
+                <option> 1 </option>
+                <option> 2 </option>
+              </Input>
+              <Label for="floatingProvince">Province</Label>
+            </FormGroup>
+          </div>
           <FormGroup className="form-floating">
             <Input
               id="country"
