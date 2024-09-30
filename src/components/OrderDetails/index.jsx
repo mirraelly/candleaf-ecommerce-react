@@ -6,7 +6,7 @@ const OrderDetails = () => {
 
     return (
         <OrderDetailsContainer >
-            <Row>
+            <Row noGutters>
                 < OrderForm />
             </Row>
         </OrderDetailsContainer>

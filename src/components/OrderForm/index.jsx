@@ -40,7 +40,13 @@ const OrderForm = () => {
           <h3 className="mt-5 form-title">Shipping Address</h3>
           <div className="d-md-flex justify-content-between gap-md-2">
             <FormGroup className="w-100">
-              <Input type="text" name="name" id="name" placeholder="Name" className="color-grey" />
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                className="color-grey"
+              />
             </FormGroup>
             <FormGroup className="w-100">
               <Input
@@ -97,9 +103,8 @@ const OrderForm = () => {
                 type="select"
                 bsSize="sm"
                 className="custom-select color-grey"
-                
               >
-                <option value="" className="d-none d-md-block sm">
+                <option value="" className="d-md-block d-none sm">
                   Province
                 </option>
                 <option value="" className="d-block d-md-none sm">
@@ -116,7 +121,7 @@ const OrderForm = () => {
               id="country"
               name="country"
               type="select"
-               bsSize="sm"
+              bsSize="sm"
               className="custom-select color-grey"
             >
               <option value="">Italy</option>
