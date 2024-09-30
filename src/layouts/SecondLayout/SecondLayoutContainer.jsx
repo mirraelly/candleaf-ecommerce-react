@@ -13,6 +13,27 @@ const SecondLayoutContainer = styled.main`
   .color {
     background-color: #f2f2f2;
   }
+
+
+  @media (max-width: 900px) {
+    .left-secondlayout {
+      padding-left: 3em;
+      padding-right: 1.5em;
+    }
+    .rigth-secondlayout {
+      padding-right: 3em;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .left-secondlayout {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .rigth-secondlayout {
+      padding-right: 0;
+    }
+  }
 `;
 
 export default SecondLayoutContainer;

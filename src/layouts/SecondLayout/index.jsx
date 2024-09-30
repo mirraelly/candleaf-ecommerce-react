@@ -13,7 +13,7 @@ const LayoutSecondary = ({ children, className }) => {
         <Col className="left-secondlayout">
           <SecondaryHeader className="g-0" />
           <div className="row gx-0 second-layout-main">
-            <section className={`${className} col-6 col-md-12`}>
+            <section className={`${className} col-12 col-md-12`}>
               {children}
             </section>
           </div>
