@@ -85,9 +85,9 @@ const Payment = () => {
               <img src={CreditCard} alt="CreditCard" />
               <h5 className="text-primary text-credit-card">Credit Card</h5>
             </CardHeader>
-            <CardBody className="mb-0">
-              <Form className="d-flex flex-column gap-2 gap-md-3 mb-0">
-                <FormGroup>
+            <CardBody className="mb-0 px-0 px-md-3">
+              <Form className="d-flex flex-column gap-form mb-0">
+                <FormGroup noMargin>
                   <InputGroup className="mt-md-2 mb-0">
                     <Input
                       type="text"
@@ -102,7 +102,7 @@ const Payment = () => {
                   </InputGroup>
                 </FormGroup>
 
-                <FormGroup>
+                <FormGroup noMargin>
                   <Input
                     id="holderName"
                     name="name"
@@ -143,8 +143,8 @@ const Payment = () => {
           </Card>
 
           <h5 className="mb-4 fw-bolder">Tax Informations</h5>
-          <Form className="d-flex flex-column gap-1 gap-md-2 mb-4">
-            <FormGroup>
+          <Form className="d-flex flex-column gap-form mb-4">
+            <FormGroup noMargin>
               <Input
                 id="vat"
                 name="vat"
@@ -153,7 +153,7 @@ const Payment = () => {
                 className="rounded-0 input-font color-grey"
               />
             </FormGroup>
-            <FormGroup>
+            <FormGroup noMargin>
               <Input
                 id="pec"
                 name="pec"

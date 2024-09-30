@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   --graylight-color: #DBDBDB;
   --bs-navbar-brand-padding-y: 0.8em;
   --bs-breadcrumb-divider: ">";
-  --bd-border-form-grey: rgba(137, 137, 137,1);
+  --bd-border-form-grey: rgba(137, 137, 137, 40%);
 }
 
 .btn-primary {

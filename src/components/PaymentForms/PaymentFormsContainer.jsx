@@ -18,7 +18,7 @@ const PaymentFormsContainer = styled.section`
   }
 
   .color-grey {
-    border: 0.5px solid var(--bd-border-form-grey);
+    border: 0.25px solid var(--bd-border-form-grey);
   }
 
   .input-font {
@@ -47,6 +47,10 @@ const PaymentFormsContainer = styled.section`
     letter-spacing: -0.9px;
     align-items: center;
     margin: auto 0;
+  }
+
+  .gap-form {
+    gap: 0.9em;
   }
 
   @include media-breakpoint-up(md) {
