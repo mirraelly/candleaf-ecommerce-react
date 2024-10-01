@@ -3,16 +3,16 @@ import { Button, Col, Form, FormGroup, Input, Row, Table } from "reactstrap";
 import PropTypes from "prop-types";
 import ProductsData from "../../db/ProductData";
 
-const OrderSummary = ({ className }) => {
+const OrderSummary = ({ className, confirmed }) => {
   const product = ProductsData.find((p) => p.id == 1);
   return (
     <OrderSummaryContainer className={`${className}`}>
       <Col md="12" className="rigth-order-summary-section py-5">
-        <section className="px-5">
+        <section className="px-5" >
           <Table className="ms-2">
             <thead>
               <tr className="mb-5">
-                <th colSpan={2} className="pb-4">
+                <th colSpan={2} className={`${confirmed ? "more-padding" : "pb-4"}`} >
                   <Row>
                     <Col md="5">
                       <figure className="image-box w-100 border-0 d-flex flex-column-reverse position-relative">
@@ -37,7 +37,7 @@ const OrderSummary = ({ className }) => {
               </tr>
             </thead>
             <tbody>
-              <tr scope="row" className="gx-0">
+              <tr scope="row" className={`${confirmed ? "d-none" : ""}  gx-0 `}>
                 <td colSpan="2" className="pt-4 pb-2 px-0">
                   <Form>
                     <FormGroup className="d-flex w-100 gap-2">
@@ -71,12 +71,15 @@ const OrderSummary = ({ className }) => {
                   <p>Calculated at the next step</p>
                 </td>
               </tr>
-              <tr scope="row" className="">
-                <td scope="col" className="px-0 third-block pt-3 border-bottom-0">
-                  Total
+              <tr scope="row">
+                <td
+                  scope="col"
+                  className= {`${confirmed ? "text-primary" : ""} px-0 third-block pt-3 border-bottom-0`}
+                >
+                  {confirmed?'Paid':'Total'}
                 </td>
                 <td scope="col" className="text-end px-0 pt-3 border-bottom-0 ">
-                  <strong className="lg-price">$ 9.99</strong>
+                  <strong className= {`${confirmed ? "text-primary" : ""} lg-price`}>$ 9.99</strong>
                 </td>
               </tr>
             </tbody>
@@ -90,6 +93,7 @@ const OrderSummary = ({ className }) => {
 OrderSummary.propTypes = {
   product: PropTypes.object.isRequired,
   className: PropTypes.string,
+  confirmed: PropTypes.bool,
 };
 
 export default OrderSummary;

@@ -99,6 +99,9 @@ const OrderSummaryContainer = styled.section`
     color: #616161;
 }
 
+th.more-padding {
+  padding-bottom: 8em;
+}
 
 `;
 

@@ -1,4 +1,4 @@
-import { ScrollRestoration } from "react-router-dom";
+import { ScrollRestoration, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import SecondLayoutContainer from "./SecondLayoutContainer";
 import SecondaryHeader from "../../components/SecondaryHeader";
@@ -6,6 +6,8 @@ import OrderSummary from "../../components/OrderSummary";
 import { Col, Row } from "reactstrap";
 
 const LayoutSecondary = ({ children, className }) => {
+  const { pathname } = useLocation();
+  const confirmed = pathname.endsWith("/confirmed");
   return (
     <SecondLayoutContainer>
       <ScrollRestoration />
@@ -18,7 +20,10 @@ const LayoutSecondary = ({ children, className }) => {
             </section>
           </div>
         </Col>
-        <OrderSummary className="d-md-block d-none col-md-6 color rigth-secondlayout" />
+        <OrderSummary
+          confirmed={confirmed}
+          className="d-md-block d-none col-md-6 color rigth-secondlayout"
+        />
       </Row>
     </SecondLayoutContainer>
   );
