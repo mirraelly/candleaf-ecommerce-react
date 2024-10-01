@@ -10,8 +10,11 @@ import {
 import Cart from "../Cart/index";
 import PropTypes from "prop-types";
 import ProductsData from "../../db/ProductData";
+import { useLocation } from "react-router-dom";
 
-const OrderSummaryAccordion = ({ className, confirmed }) => {
+const OrderSummaryAccordion = ({ className }) => {
+  const { pathname } = useLocation();
+  const confirmed = pathname.endsWith("/confirmed");
   const product = ProductsData.find((p) => p.id == 1);
   const [open, setOpen] = useState("0");
   const toggle = (id) => {
@@ -156,7 +159,6 @@ const OrderSummaryAccordion = ({ className, confirmed }) => {
 OrderSummaryAccordion.propTypes = {
   product: PropTypes.object.isRequired,
   className: PropTypes.string,
-  confirmed: PropTypes.bool,
 };
 
 export default OrderSummaryAccordion;
