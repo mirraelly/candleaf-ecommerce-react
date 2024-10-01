@@ -18,9 +18,9 @@ const CartItems = ({ product }) => {
     <CartItemsContainer className="px-2 pt-5">
       <section className="d-flex flex-column align-items-center justify-content-center gap-3 pb-5">
         <h2>Your cart items</h2>
-        <Link
+         <Link
           to="/"
-          className="stretched-link text-primary text-decoration-underline z-2" onClick={ handleClick }
+          className="text-primary text-decoration-underline z-2" onClick={ handleClick }
         >
           Back to shopping
         </Link>
@@ -64,7 +64,7 @@ const CartItems = ({ product }) => {
               </h4>
               <a
                 href="#"
-                className="stretched-link text-primary text-decoration-underline"
+                className="text-primary text-decoration-underline"
               >
                 Remove
               </a>
