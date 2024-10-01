@@ -35,7 +35,7 @@ const OrderSummaryAccordion = ({ className }) => {
               <span className="text-primary d-flex fw-normal fs-4 ps-1 accordion-title">
                 {confirmed?'ORDER PAID':'See your order details'}
                 {/* <div className={`${open == '1' ? '' : 'collapsed'} accordion-expander`}></div> */}
-                <span className="ms-3 fw-normal">
+                <span className={`${confirmed?'d-none':'d-block'} ms-3 fw-normal `}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
