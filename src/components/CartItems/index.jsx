@@ -77,7 +77,7 @@ const CartItems = ({ product }) => {
           >
             <div className="">${product.price}</div>
             <div className="products-quantity-cart-page">
-              <p className="d-md-none d-block g-0 pb-1 my-0 text-center">Quality</p>
+              <p className="d-md-none d-block g-0 pb-1 my-0 text-center">Quantity</p>
               <ProductsQuantity
                 showTag={false}
                 className="mb-3 ps-5 show-product"

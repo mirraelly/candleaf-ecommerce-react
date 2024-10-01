@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const ProductsQuantityContainer = styled.div`
   max-width: 4.5em;
+  min-width: 4em;
 
   .quantity-title {
     font-size: 1.125em;
