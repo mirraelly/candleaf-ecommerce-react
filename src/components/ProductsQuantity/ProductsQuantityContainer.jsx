@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const ProductsQuantityContainer = styled.div`
-  width: 100%;
-  margin: auto;
+  max-width: 4.5em;
 
   .quantity-title {
     font-size: 1.125em;
@@ -26,20 +25,12 @@ const ProductsQuantityContainer = styled.div`
   .input-group-sm > .form-select,
   .input-group-sm > .input-group-text {
     padding: 0 0.5rem;
-  }
-
-  .input-group
-    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
-      .valid-feedback
-    ):not(.invalid-tooltip):not(.invalid-feedback) {
-    margin-left: calc(var(--bs-border-width) * -7);
-    /* margin-left: auto;
-    margin-right: auto; */
+    min-height: 0;
   }
 
   .input-group-sm > .btn,
   .input-group-sm > .form-control {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   @media screen and (max-width: 800px) {

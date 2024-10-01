@@ -16,33 +16,28 @@ const Quantity = ({ showTag }) => {
 
   return (
     <ProductsQuantityContainer className="d-flex text-align-center justify-content-center flex-column align-items-md-start p-0 w-75 m-0">
-      {showTag && <label className="quantity-title">Quantity</label>}
+      {showTag && <label className="quantity-title pb-1">Quantity</label>}
       <InputGroup
-        className="border border-primary quantity-box d-flex justify-content-center align-items-center text-center"
+        className="border border-primary quantity-input"
         size="sm"
-        style={{ width: '70px' }}
       >
         <Button
           color="white"
           onClick={increment}
-          className="text-primary signal-button"
-          style={{ width: '5px', textAlign: 'end' }}
+          className="text-primary"
         >
           +
         </Button>
         <Input
-          type="number"
+          type="text"
           value={quantity}
           readOnly
-          className="text-center border-0"
-          placeholder="Large Input"
-          style={{ width: '32px'}}
+          className="text-center border-0 fs-6 px-0"
         />
         <Button
           color="white"
           onClick={decrement}
-          className="text-primary signal-button"
-          style={{ width: '5px', textAlign: 'start' }}
+          className="text-primary"
         >
           -
         </Button>
