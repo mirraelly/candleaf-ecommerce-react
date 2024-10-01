@@ -6,7 +6,7 @@ const OrderNav = () => {
             <BreadcrumbItem href="/cart" tag="a" className='text-primary'>
                 Cart
             </BreadcrumbItem>
-            <BreadcrumbItem href="/details" tag="a" className='text-black'>
+            <BreadcrumbItem href="#" tag="a" className='text-black'>
                 Details
             </BreadcrumbItem>
             <BreadcrumbItem href="/shipping" tag="a" className='text-light-emphasis'>
