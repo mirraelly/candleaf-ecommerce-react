@@ -1,5 +1,5 @@
 import OrderSummaryAccordionContainer from "./OrderSummaryAccordionContainer";
-import { Button, Col, Form, FormGroup, Input, Table } from "reactstrap";
+import { Button, Col, Form, FormGroup, Input, Row, Table } from "reactstrap";
 import { useState } from "react";
 import {
   Accordion,
@@ -11,7 +11,7 @@ import Cart from "../Cart/index";
 import PropTypes from "prop-types";
 import ProductsData from "../../db/ProductData";
 
-const OrderSummaryAccordion = ({className}) => {
+const OrderSummaryAccordion = ({ className, confirmed }) => {
   const product = ProductsData.find((p) => p.id == 1);
   const [open, setOpen] = useState("0");
   const toggle = (id) => {
@@ -55,63 +55,92 @@ const OrderSummaryAccordion = ({className}) => {
             <AccordionBody accordionId="1">
               <Table>
                 <thead>
-                  <tr className="mb-5" scope="row">
-                    <th scope="col">
-                      <figure className="image-box w-75 border-0 d-flex flex-column-reverse position-relative">
-                        <img
-                          src={product.image}
-                          alt="Image's product"
-                          className="candle-image img-fluid"
-                        />
-                        <span className="position-absolute top-0 start-100 translate-middle px-2 bg-primary border border-light rounded-circle text-white">
-                          1
-                        </span>
-                      </figure>
-                    </th>
+                  <tr className="mb-5">
                     <th
-                      scope="col"
-                      className="d-flex flex-column border-0 gap-3"
+                      colSpan={2}
+                      className={`${confirmed ? "more-padding" : "pb-4"}`}
                     >
-                      <h5 className="product-title">
-                        {product.name} Candleaf®
-                      </h5>
-                      <p className="  text-primary">${product.price}</p>
+                      <Row>
+                        <Col xs="5" className="px-0">
+                          <figure className="image-box w-100 border-0 d-flex flex-column-reverse position-relative">
+                            <img
+                              src={product.image}
+                              alt="Image's product"
+                              className="candle-image img-fluid"
+                            />
+                            <span className="position-absolute top-0 start-100 translate-middle px-2 bg-primary border border-light rounded-circle text-white">
+                              1
+                            </span>
+                          </figure>
+                        </Col>
+                        <Col xs="7" className="px-0 ps-4">
+                          <h5 className="product-title text-16">
+                            {product.name} Candleaf®
+                          </h5>
+                          <p className="text-primary price">${product.price}</p>
+                        </Col>
+                      </Row>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr scope="row">
-                    <td colSpan="2">
+                  <tr
+                    scope="row"
+                    className={`${confirmed ? "d-none" : ""}  gx-0 `}
+                  >
+                    <td colSpan="2" className="pt-4 pb-2 px-0">
                       <Form>
                         <FormGroup className="d-flex w-100 gap-2">
-                          <Input
-                            type="text"
-                            name="coupon"
-                            id="couponCode"
-                            placeholder="Enter coupon code"
-                            className="w-75"
-                          />
-                          <Button color="secondary" className="border-0">
-                            Add code
-                          </Button>
+                          <Col xs="9" className="px-0">
+                            <Input
+                              type="text"
+                              name="coupon"
+                              id="couponCode"
+                              placeholder="Coupon code"
+                            />
+                          </Col>
+                          <Col xs="3" className="gx-0 px-0">
+                            <Button
+                              color="secondary"
+                              className="border-0 add-button w-100"
+                            >
+                              Add
+                            </Button>
+                          </Col>
                         </FormGroup>
                       </Form>
                     </td>
                   </tr>
-                  <tr scope="row">
-                    <td scope="row" className="">
+                  <tr scope="row" className="third-block">
+                    <td scope="row" className="px-0 pt-4 pb-3">
                       <p>Subtotal</p>
                       <p>Shipping</p>
                     </td>
-                    <td scope="col" className="text-end">
-                      <p>$9.99</p>
+                    <td scope="col" className="text-end px-0 pt-4 pb-3">
+                      <p>$ 9.99</p>
                       <p>Calculated at the next step</p>
                     </td>
                   </tr>
-                  <tr scope="row" className="">
-                    <td scope="col">Total</td>
-                    <td scope="col" className="text-end">
-                      <strong>$9.99</strong>
+                  <tr scope="row">
+                    <td
+                      scope="col"
+                      className={`${
+                        confirmed ? "text-primary" : ""
+                      } px-0 third-block pt-3 border-bottom-0`}
+                    >
+                      {confirmed ? "Paid" : "Total"}
+                    </td>
+                    <td
+                      scope="col"
+                      className="text-end px-0 pt-3 border-bottom-0 "
+                    >
+                      <strong
+                        className={`${
+                          confirmed ? "text-primary" : ""
+                        } lg-price`}
+                      >
+                        $ 9.99
+                      </strong>
                     </td>
                   </tr>
                 </tbody>
@@ -127,6 +156,7 @@ const OrderSummaryAccordion = ({className}) => {
 OrderSummaryAccordion.propTypes = {
   product: PropTypes.object.isRequired,
   className: PropTypes.string,
+  confirmed: PropTypes.bool,
 };
 
 export default OrderSummaryAccordion;
