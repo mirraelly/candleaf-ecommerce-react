@@ -9,6 +9,10 @@ const OrderFormContainer = styled.section`
     /* border-color: #898989; */
   }
 
+  .green-border {
+    border-color: rgb(var(--bs-primary-rgb));
+  }
+
   .color-grey {
     border: 0.25px solid var(--bd-border-form-grey);
   }
