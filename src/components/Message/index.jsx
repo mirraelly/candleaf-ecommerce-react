@@ -9,6 +9,7 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
     if (isOpen) {
       setShow(true);
 
+      if (icon !== "danger") {
       const timer = setTimeout(() => {
         setShow(false);
         toggle();
@@ -16,14 +17,20 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
 
       return () => clearTimeout(timer);
     }
-  }, [isOpen, toggle]);
+  }
+  }, [isOpen, toggle, icon]);
+
+  const handleClose = () => {
+    setShow(false);
+    toggle();
+  };
 
   return (
     <>
       {show ? (
         <Toast
           isOpen={true}
-          className="position-fixed top-50 start-50 translate-middle shadow-1"
+          className="position-fixed top-50 start-50 translate-middle"
           style={{ zIndex: 2 }}
         >
           {title ? (
@@ -39,7 +46,7 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
           )}
          
           <ToastBody className={`bg-secondary p-4 text-black bg-opacity-25 d-flex flex-column fs-6`}>{body}
-            <Button className="btn w-25 mt-3 m-auto fs-6 btn-primary">OK</Button>
+            <Button className="btn w-25 mt-3 m-auto fs-6 btn-primary" onClick={handleClose}>OK</Button>
           </ToastBody>
         
         </Toast>
