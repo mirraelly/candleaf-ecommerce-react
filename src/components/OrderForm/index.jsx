@@ -31,7 +31,7 @@ const OrderForm = () => {
     contact: "",
     discount: false,
     name: "",
-    secondname: "",
+    secondName: "",
     address: "",
     note: "",
     postalCode: "",
@@ -44,7 +44,7 @@ const OrderForm = () => {
     contact: false,
     discount: false,
     name: false,
-    secondname: false,
+    secondName: false,
     address: false,
     note: false,
     postalCode: false,
@@ -70,7 +70,7 @@ const OrderForm = () => {
     const newErrors = {
       contact: formValues.contact === "",
       name: formValues.name === "",
-      secondname: formValues.name === "",
+      secondName: formValues.name === "",
       address: formValues.address === "",
       postalCode: formValues.postalCode === "",
       city: formValues.postalCode === "",
@@ -204,7 +204,7 @@ const OrderForm = () => {
                 id="note"
                 placeholder="Shipping note (optional)"
                 className="color-grey"
-                value={formValues.city}
+                value={formValues.note}
                 onChange={handleInputChange}
               />
             </FormGroup>
