@@ -91,7 +91,6 @@ const OrderSummary = ({ className, confirmed }) => {
 };
 
 OrderSummary.propTypes = {
-  product: PropTypes.object.isRequired,
   className: PropTypes.string,
   confirmed: PropTypes.bool,
 };

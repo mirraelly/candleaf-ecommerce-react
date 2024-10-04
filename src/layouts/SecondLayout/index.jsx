@@ -32,7 +32,6 @@ const LayoutSecondary = ({ children, className }) => {
 LayoutSecondary.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  product: PropTypes.object.isRequired,
 };
 
 export default LayoutSecondary;

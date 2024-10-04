@@ -10,9 +10,22 @@ import {
   Button,
 } from "reactstrap";
 import { useState } from "react";
+import Message from "../Message";
 
 const OrderForm = () => {
   const [submited, setSubmited] = useState(false);
+  const [message, setMessage] = useState({
+    toggle: () => setMessage({ ...message, isOpen: false }),
+    isOpen: false,
+  });
+
+  const showMessage = (props) => {
+    setMessage({
+      ...message,
+      ...props,
+      isOpen: true,
+    });
+  };
 
   const [formValues, setFormValues] = useState({
     contact: "",
@@ -72,222 +85,242 @@ const OrderForm = () => {
 
     if (!hasErrors) {
       alert("Formulário enviado com sucesso!");
+    } else {
+      showMessage({
+        title: "Warning!",
+        body: "There are erros in the fields. Please, correct and try again.",
+        icon: "danger"
+      });
     }
   };
 
   return (
-    <OrderFormContainer className="my-5">
-      <Col md="12">
-        <div className="d-flex justify-content-between align-items-center">
-          <h3 className="mb-4 form-title">Contact</h3>
-          <div className="d-flex gap-1 fw-medium">
-            <p className="text-p-font-size">Do you have an account? </p>
-            <a href="#" className="text-primary text-p-font-size">
-              Login
-            </a>
-          </div>
-        </div>
-
-        <Form
-          onSubmit={handleSubmit}
-          onChange={handleInputChange}
-          noValidate
-          className={submited?'was-validated':''}
-        >
-          <FormGroup>
-            <Input
-              type="text"
-              name="contact"
-              id="contact"
-              placeholder="Email or mobile phone number"
-              className="green-border"
-              value={formValues.contact}
-              required
-              invalid={errors.contact}
-            />
-            <FormFeedback className="border-danger">
-              The Contact field is mandatory.
-            </FormFeedback>
-          </FormGroup>
-          <FormGroup check>
-            <Label check className="me-0">
-              <Input
-                type="checkbox"
-                name="discount"
-                className="me-0 rounded-0 border-2 border-dark-subtle"
-                value={formValues.discount}
-              />{" "}
-              <span className="text-p-font-size fw-medium span-text-input">
-                Add me to Candleaf newsletter for a 10% discount
-              </span>
-            </Label>
-          </FormGroup>
-
-          <h3 className="mt-5 form-title">Shipping Address</h3>
-          <div className="d-md-flex justify-content-between gap-md-2">
-            <FormGroup className="w-100">
-              <Input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Name"
-                className="color-grey"
-                value={formValues.name}
-                invalid={errors.name}
-                required
-              />
-              <FormFeedback className="border-danger">
-                The Name is mandatory.
-              </FormFeedback>
-            </FormGroup>
-            <FormGroup className="w-100">
-              <Input
-                type="text"
-                name="secondName"
-                id="secondName"
-                placeholder="Second name"
-                className="color-grey"
-                value={formValues.secondname}
-                invalid={errors.secondname}
-                required
-              />
-              <FormFeedback className="border-danger">
-                The Second name is mandatory.
-              </FormFeedback>
-            </FormGroup>
+    <>
+      <OrderFormContainer className="my-5">
+        <Col md="12">
+          <div className="d-flex justify-content-between align-items-center">
+            <h3 className="mb-4 form-title">Contact</h3>
+            <div className="d-flex gap-1 fw-medium">
+              <p className="text-p-font-size">Do you have an account? </p>
+              <a href="#" className="text-primary text-p-font-size">
+                Login
+              </a>
+            </div>
           </div>
 
-          <FormGroup>
-            <Input
-              type="text"
-              name="address"
-              id="address"
-              placeholder="Address and number"
-              className="color-grey"
-              value={formValues.address}
-              invalid={errors.address}
-              required
-            />
-            <FormFeedback className="border-danger">
-              Address and number are mandatory.
-            </FormFeedback>
-          </FormGroup>
-          <FormGroup>
-            <Input
-              type="text"
-              name="note"
-              id="note"
-              placeholder="Shipping note (optional)"
-              className="color-grey"
-              value={formValues.city}
-            />
-          </FormGroup>
-          <div className="d-md-flex justify-content-between gap-md-2 flex-nowrap ">
-            <FormGroup className="order-2">
+          <Form
+            onSubmit={handleSubmit}
+            onChange={handleInputChange}
+            noValidate
+            className={submited ? "was-validated" : ""}
+          >
+            <FormGroup>
               <Input
                 type="text"
-                name="postalCode"
-                id="postalCode"
-                placeholder="Postal code"
-                className="color-grey"
-                value={formValues.postalCode}
-                invalid={errors.postalCode}
+                name="contact"
+                id="contact"
+                placeholder="Email or mobile phone number"
+                className="green-border"
+                value={formValues.contact}
+                onChange={handleInputChange}
+                invalid={errors.contact}
                 required
               />
               <FormFeedback className="border-danger">
-                The Postal code is mandatory.
+                The Contact field is mandatory.
               </FormFeedback>
             </FormGroup>
-            <FormGroup className="order-1">
+            <FormGroup check>
+              <Label check className="me-0">
+                <Input
+                  type="checkbox"
+                  name="discount"
+                  className="me-0 rounded-0 border-2 border-dark-subtle"
+                  value={formValues.discount}
+                  onChange={handleInputChange}
+                />{" "}
+                <span className="text-p-font-size fw-medium span-text-input">
+                  Add me to Candleaf newsletter for a 10% discount
+                </span>
+              </Label>
+            </FormGroup>
+
+            <h3 className="mt-5 form-title">Shipping Address</h3>
+            <div className="d-md-flex justify-content-between gap-md-2">
+              <FormGroup className="w-100">
+                <Input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  className="color-grey"
+                  value={formValues.name}
+                  onChange={handleInputChange}
+                  invalid={errors.name}
+                  required
+                />
+                <FormFeedback className="border-danger">
+                  The Name is mandatory.
+                </FormFeedback>
+              </FormGroup>
+              <FormGroup className="w-100">
+                <Input
+                  type="text"
+                  name="secondName"
+                  id="secondName"
+                  placeholder="Second name"
+                  className="color-grey"
+                  value={formValues.secondname}
+                  onChange={handleInputChange}
+                  invalid={errors.secondname}
+                  required
+                />
+                <FormFeedback className="border-danger">
+                  The Second name is mandatory.
+                </FormFeedback>
+              </FormGroup>
+            </div>
+
+            <FormGroup>
               <Input
                 type="text"
-                name="city"
-                id="city"
-                placeholder="City"
+                name="address"
+                id="address"
+                placeholder="Address and number"
+                className="color-grey"
+                value={formValues.address}
+                onChange={handleInputChange}
+                invalid={errors.address}
+                required
+              />
+              <FormFeedback className="border-danger">
+                Address and number are mandatory.
+              </FormFeedback>
+            </FormGroup>
+            <FormGroup>
+              <Input
+                type="text"
+                name="note"
+                id="note"
+                placeholder="Shipping note (optional)"
                 className="color-grey"
                 value={formValues.city}
-                invalid={errors.city}
-                required
+                onChange={handleInputChange}
               />
-              <FormFeedback className="border-danger">
-                The City is mandatory.
-              </FormFeedback>
             </FormGroup>
-            <FormGroup className="form-floating order-3" floating>
+            <div className="d-md-flex justify-content-between gap-md-2 flex-nowrap ">
+              <FormGroup className="order-2">
+                <Input
+                  type="text"
+                  name="postalCode"
+                  id="postalCode"
+                  placeholder="Postal code"
+                  className="color-grey"
+                  value={formValues.postalCode}
+                  onChange={handleInputChange}
+                  invalid={errors.postalCode}
+                  required
+                />
+                <FormFeedback className="border-danger">
+                  The Postal code is mandatory.
+                </FormFeedback>
+              </FormGroup>
+              <FormGroup className="order-1">
+                <Input
+                  type="text"
+                  name="city"
+                  id="city"
+                  placeholder="City"
+                  className="color-grey"
+                  value={formValues.city}
+                  onChange={handleInputChange}
+                  invalid={errors.city}
+                  required
+                />
+                <FormFeedback className="border-danger">
+                  The City is mandatory.
+                </FormFeedback>
+              </FormGroup>
+              <FormGroup className="form-floating order-3" floating>
+                <Input
+                  id="province"
+                  name="province"
+                  type="select"
+                  bsSize="sm"
+                  className="custom-select color-grey"
+                  value={formValues.province}
+                  onChange={handleInputChange}
+                  invalid={errors.province}
+                  required
+                >
+                  <option value="" className="d-md-block d-none sm">
+                    Province
+                  </option>
+                  <option value="" className="d-block d-md-none sm">
+                    Select your province
+                  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                </Input>
+                <Label for="floatingProvince">Province</Label>
+                <FormFeedback className="border-danger">
+                  The Province field is mandatory.
+                </FormFeedback>
+              </FormGroup>
+            </div>
+            <FormGroup className="form-floating">
               <Input
-                id="province"
-                name="province"
+                id="country"
+                name="country"
                 type="select"
                 bsSize="sm"
                 className="custom-select color-grey"
-                value={formValues.province}
-                invalid={errors.province}
+                value={formValues.country}
+                onChange={handleInputChange}
+                invalid={errors.country}
                 required
               >
-                <option value="" className="d-md-block d-none sm">
-                  Province
-                </option>
-                <option value="" className="d-block d-md-none sm">
-                  Select your province
-                </option>
-                <option value="1"> 1 </option>
-                <option value="2"> 2 </option>
+                <option value="">Select your country</option>
+                <option value="Italy">Italy</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Other">Other</option>
               </Input>
-              <Label for="floatingProvince">Province</Label>
+              <Label for="floatingCountry">Country/Region</Label>
               <FormFeedback className="border-danger">
-                The Province field is mandatory.
+                The Country field is mandatory.
               </FormFeedback>
             </FormGroup>
-          </div>
-          <FormGroup className="form-floating">
-            <Input
-              id="country"
-              name="country"
-              type="select"
-              bsSize="sm"
-              className="custom-select color-grey"
-              value={formValues.country}
-              invalid={errors.country}
-              required
-            >
-              <option value="">Select your country</option>
-              <option value="Italy">Italy</option>
-              <option value="Brazil">Brazil</option>
-              <option value="Other">Other</option>
-            </Input>
-            <Label for="floatingCountry">Country/Region</Label>
-            <FormFeedback className="border-danger">
-              The Country field is mandatory.
-            </FormFeedback>
-          </FormGroup>
-          <FormGroup check className="py-3">
-            <Label check>
-              <Input
-                type="checkbox"
-                name="saveData"
-                id="saveData"
-                className="me-0 rounded-0 border-2 border-dark-subtle"
-                value={formValues.saveData}
-              />{" "}
-              <span className="text-p-font-size fw-medium span-text-input">
-                Save this information for a future fast checkout
-              </span>
-            </Label>
-          </FormGroup>
-          <div className="d-flex flex-column align-items-center gap-3 pt-4">
-            <Button type="submit" className="w-100 btn btn-primary">
-              Go to shipping
-            </Button>
-            <Link
-              to={"/cart"}
-              className="w-100 text-primary text-decoration-underline d-flex justify-content-center"
-            >
-              Back to cart
-            </Link>
-          </div>
-        </Form>
-      </Col>
-    </OrderFormContainer>
+            <FormGroup check className="py-3">
+              <Label check>
+                <Input
+                  type="checkbox"
+                  name="saveData"
+                  id="saveData"
+                  className="me-0 rounded-0 border-2 border-dark-subtle"
+                  value={formValues.saveData}
+                  onChange={handleInputChange}
+                />{" "}
+                <span className="text-p-font-size fw-medium span-text-input">
+                  Save this information for a future fast checkout
+                </span>
+              </Label>
+            </FormGroup>
+            <div className="d-flex flex-column align-items-center gap-3 pt-4">
+              <Button type="submit" className="w-100 btn btn-primary">
+                Go to shipping
+              </Button>
+              <Link
+                to={"/cart"}
+                className="w-100 text-primary text-decoration-underline d-flex justify-content-center"
+              >
+                Back to cart
+              </Link>
+            </div>
+          </Form>
+        </Col>
+      </OrderFormContainer>
+      <Message {...message}></Message>
+    </>
   );
 };
 

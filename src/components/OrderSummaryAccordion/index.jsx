@@ -157,7 +157,6 @@ const OrderSummaryAccordion = ({ className }) => {
 };
 
 OrderSummaryAccordion.propTypes = {
-  product: PropTypes.object.isRequired,
   className: PropTypes.string,
 };
 
