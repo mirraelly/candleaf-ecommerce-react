@@ -10,14 +10,14 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
       setShow(true);
 
       if (icon !== "danger") {
-      const timer = setTimeout(() => {
-        setShow(false);
-        toggle();
-      }, 3000);
+        const timer = setTimeout(() => {
+          setShow(false);
+          toggle();
+        }, 3000);
 
-      return () => clearTimeout(timer);
+        return () => clearTimeout(timer);
+      }
     }
-  }
   }, [isOpen, toggle, icon]);
 
   const handleClose = () => {
@@ -37,18 +37,30 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
             <ToastHeader
               icon={icon || "info"}
               toggle={function noRefCheck() {}}
-              className={`bg-light text-black text-bold py-2 border fs-5`} 
+              className={`bg-light text-black text-bold py-2 border fs-5`}
+              close={<></>}
             >
               {title}
             </ToastHeader>
           ) : (
             <></>
           )}
-         
-          <ToastBody className={`bg-secondary p-4 text-black bg-opacity-25 d-flex flex-column fs-6`}>{body}
-            <Button className="btn w-25 mt-3 m-auto fs-6 btn-primary" onClick={handleClose}>OK</Button>
+
+          <ToastBody
+            className={`bg-secondary p-4 text-black bg-opacity-25 d-flex flex-column fs-6`}
+          >
+            {body}
+            {icon === "danger" ? (
+              <Button
+                className="btn w-25 mt-3 m-auto fs-6 btn-primary"
+                onClick={handleClose}
+              >
+                OK
+              </Button>
+            ) : (
+              <></>
+            )}
           </ToastBody>
-        
         </Toast>
       ) : (
         <></>

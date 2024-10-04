@@ -84,12 +84,16 @@ const OrderForm = () => {
     const hasErrors = Object.values(newErrors).some((error) => error === true);
 
     if (!hasErrors) {
-      alert("Formulário enviado com sucesso!");
+      showMessage({
+        title: "Success!",
+        body: "The information were sent successfully!",
+        icon: "success",
+      });
     } else {
       showMessage({
         title: "Warning!",
         body: "There are erros in the fields. Please, correct and try again.",
-        icon: "danger"
+        icon: "danger",
       });
     }
   };
