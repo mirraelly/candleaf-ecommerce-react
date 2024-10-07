@@ -1,5 +1,5 @@
 import OrderFormContainer from "./OrderFormContainer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Col,
   Form,
@@ -13,6 +13,7 @@ import { useState } from "react";
 import Message from "../Message";
 
 const OrderForm = () => {
+  const navigate = useNavigate();
   const [submited, setSubmited] = useState(false);
   const [message, setMessage] = useState({
     toggle: () => setMessage({ ...message, isOpen: false }),
@@ -88,6 +89,7 @@ const OrderForm = () => {
         title: "Success!",
         body: "The information were sent successfully!",
         icon: "success",
+        toggle: ()=> navigate({pathname:'/shipping'})
       });
     } else {
       showMessage({

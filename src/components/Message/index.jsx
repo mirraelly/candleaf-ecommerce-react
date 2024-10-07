@@ -13,7 +13,7 @@ const Message = ({ title, body, icon, isOpen, toggle }) => {
         const timer = setTimeout(() => {
           setShow(false);
           toggle();
-        }, 3000);
+        }, 1500);
 
         return () => clearTimeout(timer);
       }
