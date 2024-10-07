@@ -27,6 +27,13 @@ const PaymentFormsContainer = styled.section`
     font-weight: 400;
   }
 
+  input[type=text], 
+  input[type=password],
+  input[type=number] {
+    min-height: 2.5rem;
+    height: 2.5rem;
+  }
+
   br.hide {
     display: none;
   }
