@@ -1,6 +1,6 @@
 import ProductDetailsContainer from "./ProductDetailsContainer.jsx";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import ProductsQuantity from "../ProductsQuantity";
 import {
   Container,
@@ -14,10 +14,18 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../context/CartContext.jsx";
 
 const ProductDetails = ({ product }) => {
   const [selectedOption, setSelectedOption] = useState("one-time");
+  const navigate = useNavigate();
+  const { addToCart, cartItems } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    navigate("/cart");
+  };
 
   return (
     <ProductDetailsContainer>
@@ -151,7 +159,9 @@ const ProductDetails = ({ product }) => {
                                   id="delivery"
                                   className="weeks-select ms-2"
                                 >
-                                  <option value="2" className="ms-2">2 weeks</option>
+                                  <option value="2" className="ms-2">
+                                    2 weeks
+                                  </option>
                                   <option value="4">4 weeks</option>
                                   <option value="6">6 weeks</option>
                                 </select>
@@ -164,18 +174,29 @@ const ProductDetails = ({ product }) => {
                             Subscribe now and get the 10% discount on every
                             recurring order. The discount will be applied at
                             checkout.
-                            <a href="#details" className="text-primary fw-light">
+                            <a
+                              href="#details"
+                              className="text-primary fw-light"
+                            >
                               {""} See details
                             </a>
                           </p>
                         </div>
                       </div>
-                      <Link
+                      {/* <Link
                         to="/cart"
                         className="w-100 btn btn-primary mt-md-4 mt-4"
                       >
                         <i className="bi bi-cart pe-2"></i> + Add to cart
-                      </Link>
+                      </Link> */}
+                      <button
+                        onClick={handleAddToCart}
+                        type="button"
+                        className="w-100 btn btn-primary mt-md-4 mt-4"
+                      >
+                        {" "}
+                        <i className="bi bi-cart pe-2"></i> + Add to cart
+                      </button>
                     </div>
                   </div>
                 </Col>

@@ -1,17 +1,13 @@
-import ProductsData from "../../db/ProductData/index.jsx";
 // import { useParams } from "react-router-dom";
 import CartItems from "../../components/CartItems/index.jsx";
 import Layout from '../../layouts/FirstLayout';
 
 function CartPage() {
   // const { id } = useParams();
-  const product = ProductsData.find((p) => {
-    return p.id == 2;
-  })
   
   return (
     <Layout className='p-md-5 m-md-5 pt-5 mt-5'>
-      <CartItems product={product} />
+      <CartItems />
     </Layout>
   )
 }
