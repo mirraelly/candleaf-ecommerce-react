@@ -131,7 +131,9 @@ const CartItems = ( ) => {
                   className="text-end align-items-center justify-content-end fs-5 fw-medium d-md-flex d-none"
                 >
                   {/* <p>$ 9.99</p> */}
+                  {/* <p className="text-total">{formatPrice(totalItemValue(item))}</p> */}
                   <p className="text-total">{formatPrice(totalItemValue(item))}</p>
+                  {/* totalItems  */}
                 </Col>
               </Col>
             );
