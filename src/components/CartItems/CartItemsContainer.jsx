@@ -44,6 +44,14 @@ const CartItemsContainer = styled.section`
     line-height: 1.5;
   }
 
+  .text-total,
+  .text-sub-total {
+      letter-spacing: -0.9px;
+      font-size: 1.125rem;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+  }
+
   @media screen and (max-width: 800px) {
     .image-box {
       min-width: 5.84625em;
@@ -55,14 +63,10 @@ const CartItemsContainer = styled.section`
     }
 
     .text-sub-total {
-      letter-spacing: -0.9px;
       font-size: 1.25em;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
     }
 
     .text-p {
-      font-family: 'Roboto', sans-serif;
       font-size: 1em;
       letter-spacing: -0.9px;
       font-weight: 400; 
