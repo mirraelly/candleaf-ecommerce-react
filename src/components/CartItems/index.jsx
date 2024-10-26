@@ -122,7 +122,8 @@ const CartItems = () => {
                       showTag={false}
                       className="mb-3 ps-5 show-product"
                       onChange={(e) =>
-                        handleQuantityChange(item.id, parseInt(e.target.value))
+                        // handleQuantityChange(item.id, parseInt(e.target.value))
+                        updateQuantity(item.id, e)
                       }
                       value={item.quantity}
                       min="1"
