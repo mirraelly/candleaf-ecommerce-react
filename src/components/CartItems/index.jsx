@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext.jsx";
 import { formatPrice } from "../../utilits/formatters.jsx";
 
-const CartItems = ( ) => {
+const CartItems = () => {
   const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
 
   const handleQuantityChange = (productId, newQuantity) => {
@@ -99,7 +99,10 @@ const CartItems = ( ) => {
                     {/* <a href="#" className="text-primary text-decoration-underline">
                   Remove
                 </a> */}
-                    <button onClick={() => removeFromCart(item.id)} className="text-primary bg-transparent border-0 text-start ps-0 text-decoration-underline fw-medium">
+                    <button
+                      onClick={() => removeFromCart(item.id)}
+                      className="text-primary bg-transparent border-0 text-start ps-0 text-decoration-underline fw-medium"
+                    >
                       Remove
                     </button>
                   </div>
@@ -121,6 +124,7 @@ const CartItems = ( ) => {
                       onChange={(e) =>
                         handleQuantityChange(item.id, parseInt(e.target.value))
                       }
+                      value={item.quantity}
                       min="1"
                     />
                     {/* no show tag label */}
@@ -132,7 +136,9 @@ const CartItems = ( ) => {
                 >
                   {/* <p>$ 9.99</p> */}
                   {/* <p className="text-total">{formatPrice(totalItemValue(item))}</p> */}
-                  <p className="text-total">{formatPrice(totalItemValue(item))}</p>
+                  <p className="text-total">
+                    {formatPrice(totalItemValue(item))}
+                  </p>
                   {/* totalItems  */}
                 </Col>
               </Col>

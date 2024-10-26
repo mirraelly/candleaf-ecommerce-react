@@ -18,12 +18,13 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../../context/CartContext.jsx";
 
 const ProductDetails = ({ product }) => {
+  const [quantity, setQuantity] = useState(1);
   const [selectedOption, setSelectedOption] = useState("one-time");
   const navigate = useNavigate();
   const { addToCart, cartItems } = useContext(CartContext);
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addToCart(product, quantity);
     navigate("/cart");
   };
 
@@ -99,7 +100,12 @@ const ProductDetails = ({ product }) => {
                       <p className="d-flex align-items-center products-price text-primary h4 ps-1 ps-md-0">
                         ${product.price}
                       </p>
-                      <ProductsQuantity showTag={true} className="pe-5" />
+                      <ProductsQuantity
+                        showTag={true}
+                        className="pe-5"
+                        onChange={(quantity) => setQuantity(quantity)}
+                        value={quantity}
+                      />
                     </div>
                     <div className="d-flex flex-column align-items-stretch py-2 gap-0">
                       <FormGroup
