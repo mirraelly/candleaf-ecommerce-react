@@ -1,20 +1,21 @@
+import { Link } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 const OrderNav = () => {
     return (
         <Breadcrumb className='mx-3'>
-            <BreadcrumbItem href="/cart" tag="a" className='text-primary'>
+            <Link to="/cart" tag="a" className='text-primary breadcrumb-item'>
                 Cart
-            </BreadcrumbItem>
-            <BreadcrumbItem href="#" tag="a" className='text-black'>
+            </Link>
+            <Link to="/order" tag="a" className='text-black breadcrumb-item'>
                 Details
-            </BreadcrumbItem>
-            <BreadcrumbItem href="/shipping" tag="a" className='text-light-emphasis'>
+            </Link>
+            <Link to="/shipping" tag="a" className='text-light-emphasis breadcrumb-item'>
                 Shipping
-            </BreadcrumbItem>
-            <BreadcrumbItem href="/payment" active className='text-light-emphasis'>
+            </Link>
+            <Link to="/payment" active className='text-light-emphasis breadcrumb-item'>
                 Payment
-            </BreadcrumbItem>
+            </Link>
         </Breadcrumb>
     );
 };
