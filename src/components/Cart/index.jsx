@@ -21,12 +21,13 @@ const Cart = () => {
           ) : (
             <img src={cart} alt="Cart Icon" className="cart" />
           )}
+          { quantity > 0 &&
           <span
             className="position-absolute top-2 start-75 translate-middle px-2 bg-primary border border-light rounded-circle text-white"
             style={{ fontSize: "10px" }}
           >
             {quantity}
-          </span>
+          </span>}
         </NavLink>
       </NavItem>
     </>
