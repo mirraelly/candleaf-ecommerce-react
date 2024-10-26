@@ -12,6 +12,7 @@ import userIcon from "../../assets/images/user-icon.svg";
 import Cart from "../Cart";
 import HeaderContainer from "./HeaderContainer";
 import Logo from "../Logo";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -30,9 +31,9 @@ const Header = () => {
         <Logo />
         <Nav className="d-md-flex d-none">
           <NavItem>
-            <NavLink
-              href="/#discovery"
-              className=""
+            <Link
+              to="/#discovery"
+              className="nav-link"
               onClick={() => setCollapsed(true)}
             >
               Discovery
@@ -40,33 +41,33 @@ const Header = () => {
                 className="bi bi-chevron-down ms-2"
                 style={{ fontSize: "0.9rem", color: "black" }}
               ></i>
-            </NavLink>
+            </Link>
           </NavItem>
           <NavItem className="ms-4">
-            <NavLink href="/#about" onClick={() => setCollapsed(true)}>
+            <Link to="/#about" onClick={() => setCollapsed(true)} className="nav-link">
               About
-            </NavLink>
+            </Link>
           </NavItem>
           <NavItem className="ms-4">
-            <NavLink href="" onClick={() => setCollapsed(true)}>
+            <Link to="/#" onClick={() => setCollapsed(true)} className="nav-link">
               Contact Us
-            </NavLink>
+            </Link>
           </NavItem>
         </Nav>
         <Nav className="col justify-content-end justify-content-md-center">
           <NavItem>
-            <NavLink href="" className="px-0">
+            <Link to="/#" className="px-0 nav-link">
               <img src={userIcon} alt="User icon" />
-            </NavLink>
+            </Link>
           </NavItem>
           <Cart />
         </Nav>
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar className="ms-2">
             <NavItem>
-              <NavLink
-                href="/#discovery"
-                className="ms-2"
+              <Link
+                to="/#discovery"
+                className="ms-2 nav-link"
                 onClick={() => setCollapsed(true)}
               >
                 <i
@@ -74,17 +75,17 @@ const Header = () => {
                   style={{ fontSize: "0.7rem" }}
                 ></i>
                 Discovery
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem className="ms-4">
-              <NavLink href="/#about" onClick={() => setCollapsed(true)}>
+              <Link to="/#about" onClick={() => setCollapsed(true)} className="nav-link">
                 About
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem className="ms-4">
-              <NavLink href="" onClick={() => setCollapsed(true)}>
+              <Link to="/#" onClick={() => setCollapsed(true)} className="nav-link">
                 Contact Us
-              </NavLink>
+              </Link>
             </NavItem>
           </Nav>
         </Collapse>
