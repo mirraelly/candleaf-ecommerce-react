@@ -66,7 +66,7 @@ const OrderSummaryAccordion = ({ className }) => {
                   </svg>
                 </span>
               </span>
-              <span className="fw-medium fs-5">$ 9,99</span>
+              <span className="fw-medium fs-5">{formatPrice(subtotal)}</span>
             </AccordionHeader>
             <AccordionBody accordionId="1">
               <Table>
