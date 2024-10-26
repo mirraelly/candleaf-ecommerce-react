@@ -82,7 +82,7 @@ const OrderSummary = ({ className, confirmed }) => {
                         <Button
                           color="secondary"
                           className="border-0 add-button"
-                          onClick={()=>{}}
+                          onClick={() => {}}
                         >
                           Add code
                         </Button>

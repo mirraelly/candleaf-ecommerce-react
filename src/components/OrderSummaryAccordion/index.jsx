@@ -1,6 +1,6 @@
 import OrderSummaryAccordionContainer from "./OrderSummaryAccordionContainer";
 import { Button, Col, Form, FormGroup, Input, Row, Table } from "reactstrap";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   Accordion,
   AccordionBody,
@@ -11,8 +11,11 @@ import Cart from "../Cart/index";
 import PropTypes from "prop-types";
 import ProductsData from "../../db/ProductData";
 import { useLocation } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
+import { formatPrice } from "../../utilits/formatters";
 
 const OrderSummaryAccordion = ({ className }) => {
+  const { cartItems, removeFromCart, updateQuantity } = useContext(CartContext);
   const { pathname } = useLocation();
   const confirmed = pathname.endsWith("/confirmed");
   const product = ProductsData.find((p) => p.id == 1);
@@ -25,6 +28,12 @@ const OrderSummaryAccordion = ({ className }) => {
     }
   };
 
+  //calculate the subtotal (sum of the values of all items)
+  const subtotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+
   return (
     <OrderSummaryAccordionContainer className={`${className} mt-2`}>
       <Col md="6" sm="12">
@@ -33,9 +42,13 @@ const OrderSummaryAccordion = ({ className }) => {
             <AccordionHeader targetId="1" className="d-flex">
               <Cart />
               <span className="text-primary d-flex fw-normal fs-4 ps-1 accordion-title">
-                {confirmed?'ORDER PAID':'See your order details'}
+                {confirmed ? "ORDER PAID" : "See your order details"}
                 {/* <div className={`${open == '1' ? '' : 'collapsed'} accordion-expander`}></div> */}
-                <span className={`${confirmed?'d-none':'d-block'} ms-3 fw-normal `}>
+                <span
+                  className={`${
+                    confirmed ? "d-none" : "d-block"
+                  } ms-3 fw-normal `}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -63,26 +76,32 @@ const OrderSummaryAccordion = ({ className }) => {
                       colSpan={2}
                       className={`${confirmed ? "more-padding" : "pb-4"}`}
                     >
-                      <Row>
-                        <Col xs="5" className="px-0">
-                          <figure className="image-box w-100 border-0 d-flex flex-column-reverse position-relative">
-                            <img
-                              src={product.image}
-                              alt="Image's product"
-                              className="candle-image img-fluid"
-                            />
-                            <span className="position-absolute top-0 start-100 translate-middle px-2 bg-primary border border-light rounded-circle text-white">
-                              1
-                            </span>
-                          </figure>
-                        </Col>
-                        <Col xs="7" className="px-0 ps-4">
-                          <h5 className="product-title text-16">
-                            {product.name} Candleaf®
-                          </h5>
-                          <p className="text-primary price">${product.price}</p>
-                        </Col>
-                      </Row>
+                      {cartItems.map((item) => {
+                        return (
+                          <Row key={item.id}>
+                            <Col xs="5" className="px-0">
+                              <figure className="image-box w-100 border-0 d-flex flex-column-reverse position-relative">
+                                <img
+                                  src={product.image}
+                                  alt="Image's product"
+                                  className="candle-image img-fluid"
+                                />
+                                <span className="position-absolute top-0 start-100 translate-middle px-2 bg-primary border border-light rounded-circle text-white">
+                                  {item.quantity}
+                                </span>
+                              </figure>
+                            </Col>
+                            <Col xs="7" className="px-0 ps-4">
+                              <h5 className="product-title text-16">
+                                {item.name} Candleaf®
+                              </h5>
+                              <p className="text-primary price">
+                                ${item.price * item.quantity}
+                              </p>
+                            </Col>
+                          </Row>
+                        );
+                      })}
                     </th>
                   </tr>
                 </thead>
@@ -106,6 +125,7 @@ const OrderSummaryAccordion = ({ className }) => {
                             <Button
                               color="secondary"
                               className="border-0 add-button w-100"
+                              onClick={() => {}}
                             >
                               Add
                             </Button>
@@ -120,7 +140,7 @@ const OrderSummaryAccordion = ({ className }) => {
                       <p>Shipping</p>
                     </td>
                     <td scope="col" className="text-end px-0 pt-4 pb-3">
-                      <p>$ 9.99</p>
+                      <p>{formatPrice(subtotal)}</p>
                       <p>Calculated at the next step</p>
                     </td>
                   </tr>
@@ -142,7 +162,7 @@ const OrderSummaryAccordion = ({ className }) => {
                           confirmed ? "text-primary" : ""
                         } lg-price`}
                       >
-                        $ 9.99
+                        {formatPrice(subtotal)}
                       </strong>
                     </td>
                   </tr>
