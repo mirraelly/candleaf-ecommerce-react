@@ -38,7 +38,8 @@ const ProductsCardContainer = styled.div`
     }
 
     .products-card {
-      box-shadow: 0.05rem 0.28rem 0.8rem rgba(123, 123, 123, 0.085),
+      box-shadow:
+        0.05rem 0.28rem 0.8rem rgba(123, 123, 123, 0.085),
         -0.05rem 0 0.35rem rgba(123, 123, 123, 0.085);
     }
   }

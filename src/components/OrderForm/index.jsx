@@ -89,7 +89,7 @@ const OrderForm = () => {
         title: "Success!",
         body: "The information were sent successfully!",
         icon: "success",
-        toggle: ()=> navigate({pathname:'/shipping'})
+        toggle: () => navigate({ pathname: "/shipping" }),
       });
     } else {
       showMessage({

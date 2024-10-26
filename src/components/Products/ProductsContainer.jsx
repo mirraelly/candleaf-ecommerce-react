@@ -7,7 +7,6 @@ const ProductsContainer = styled.section`
     line-height: 1.725em;
     letter-spacing: 0.1px;
   }
-
 `;
 
 export default ProductsContainer;

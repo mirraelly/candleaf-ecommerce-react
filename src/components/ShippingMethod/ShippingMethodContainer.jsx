@@ -26,8 +26,8 @@ const ShippingMethodContainer = styled.section`
 
   @media (max-width: 800px) {
     br.hide {
-    display: block;
-  }
+      display: block;
+    }
   }
 `;
 

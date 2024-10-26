@@ -10,10 +10,7 @@ const Cart = () => {
   const { pathname } = useLocation();
   const confirmed = pathname.endsWith("/confirmed");
 
-  const quantity = cartItems.reduce(
-    (total, item) => total + item.quantity,
-    0
-  );
+  const quantity = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <>

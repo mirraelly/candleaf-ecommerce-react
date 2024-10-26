@@ -16,7 +16,9 @@ const Footer = () => {
                 style={{ width: "9.375em" }}
               />
               <p className="lh-base">
-                Your natural candle made for <br className="d-md-block d-none"/> your home and for your wellness.
+                Your natural candle made for{" "}
+                <br className="d-md-block d-none" /> your home and for your
+                wellness.
               </p>
             </div>
           </div>

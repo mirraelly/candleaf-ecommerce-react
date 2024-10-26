@@ -34,11 +34,11 @@ const OrderFormContainer = styled.section`
     padding: 0.9rem 0.5rem;
   }
 
-  .form-floating>.form-select~label::after {
+  .form-floating > .form-select ~ label::after {
     background-color: transparent;
   }
 
-  .form-floating>.form-select {
+  .form-floating > .form-select {
     min-height: 2.5rem;
     height: 2.5rem;
     padding-top: 0.375rem;
@@ -50,11 +50,10 @@ const OrderFormContainer = styled.section`
     font-size: 0.875em;
   }
 
-  input[type=text] {
+  input[type="text"] {
     min-height: 2.5rem;
     height: 2.5rem;
   }
-
 
   .span-text-input {
     vertical-align: text-top;
@@ -63,8 +62,6 @@ const OrderFormContainer = styled.section`
   .form-check .form-check-input {
     float: unset;
   }
-
-
 `;
 
 export default OrderFormContainer;

@@ -23,7 +23,7 @@ const CartItems = () => {
   //calculate total items
   const totalItems = cartItems.reduce(
     (total, item) => total + item.quantity,
-    0
+    0,
   );
 
   // calculate the total value of an item (quantity * price)
@@ -32,7 +32,7 @@ const CartItems = () => {
   //calculate the subtotal (sum of the values of all items)
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
-    0
+    0,
   );
 
   return (

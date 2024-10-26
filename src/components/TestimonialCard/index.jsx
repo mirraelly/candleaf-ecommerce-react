@@ -7,9 +7,7 @@ const TestimonialCard = ({ testimonial }) => {
   return (
     <TestimonialCardContainer>
       <Col className="mx-2">
-        <Card
-          className="rounded-0 border-0 d-flex align-items-center testimonial-card-style"
-        >
+        <Card className="rounded-0 border-0 d-flex align-items-center testimonial-card-style">
           <img
             src={testimonial.image}
             alt="Image's testimonial"
@@ -18,7 +16,9 @@ const TestimonialCard = ({ testimonial }) => {
           <TestimonialStar rate={testimonial.rate}></TestimonialStar>
           <CardBody className="text-center d-flex flex-column">
             <CardTitle className="card-title">{testimonial.title}</CardTitle>
-            <CardSubtitle className="card-subtitle">{testimonial.subtitle}</CardSubtitle>
+            <CardSubtitle className="card-subtitle">
+              {testimonial.subtitle}
+            </CardSubtitle>
           </CardBody>
         </Card>
       </Col>

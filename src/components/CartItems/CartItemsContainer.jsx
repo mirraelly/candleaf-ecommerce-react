@@ -46,10 +46,10 @@ const CartItemsContainer = styled.section`
 
   .text-total,
   .text-sub-total {
-      letter-spacing: -0.9px;
-      font-size: 1.125rem;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
+    letter-spacing: -0.9px;
+    font-size: 1.125rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
   }
 
   @media screen and (max-width: 800px) {
@@ -59,7 +59,7 @@ const CartItemsContainer = styled.section`
     }
 
     .products-quantity-cart-page {
-        width: unset;
+      width: unset;
     }
 
     .text-sub-total {
@@ -69,7 +69,7 @@ const CartItemsContainer = styled.section`
     .text-p {
       font-size: 1em;
       letter-spacing: -0.9px;
-      font-weight: 400; 
+      font-weight: 400;
     }
   }
 `;

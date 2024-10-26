@@ -1,6 +1,6 @@
-# Projeto em desenvolvimento 
+# Projeto em desenvolvimento
 
-Projeto em desenvolvimento, utilizando as tecnologias reactstrap, vite e splide, seguindo modelo do figma. Segue o Mobile first e o  styled components.
+Projeto em desenvolvimento, utilizando as tecnologias reactstrap, vite e splide, seguindo modelo do figma. Segue o Mobile first e o styled components.
 
 # React + Vite
 

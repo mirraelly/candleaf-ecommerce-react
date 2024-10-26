@@ -10,7 +10,6 @@ const FooterContainer = styled.footer`
     background-color: var(--bs-grey-color);
     color: var(--bs-secondary-color);
   }
-  
 
   @media screen and (max-width: 800px) {
     .footer-box {

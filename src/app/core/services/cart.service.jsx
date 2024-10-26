@@ -18,7 +18,7 @@ const ProductPage = () => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  const product = { id, name: "Exemple", price: 100 }; 
+  const product = { id, name: "Exemple", price: 100 };
 
   return (
     <div>

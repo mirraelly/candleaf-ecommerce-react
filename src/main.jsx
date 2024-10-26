@@ -14,5 +14,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <GlobalStyle />
       <RouterProvider router={routes} />
     </CartProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

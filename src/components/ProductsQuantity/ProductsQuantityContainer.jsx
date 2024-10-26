@@ -35,7 +35,7 @@ const ProductsQuantityContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-     .ejMYRA .input-group-sm>.form-control {
+    .ejMYRA .input-group-sm > .form-control {
       font-size: 1em;
     }
 

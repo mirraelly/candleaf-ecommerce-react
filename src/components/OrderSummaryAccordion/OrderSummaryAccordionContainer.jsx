@@ -38,19 +38,17 @@ const OrderSummaryAccordionContainer = styled.section`
   }
 
   .lg-price {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 1.5em;
     letter-spacing: -0.9px;
     color: black;
   }
 
-
   table tr {
     border-color: rgba(86, 178, 128, 0.2);
   }
-
 
   .accordion-button {
     background-color: #f2f2f2;
@@ -87,41 +85,39 @@ const OrderSummaryAccordionContainer = styled.section`
     background-color: #f7f8fa;
   }
 
-
-.add-button {
+  .add-button {
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     letter-spacing: 0px;
     padding: 0.47em 1.3em;
-}
+  }
 
-.third-block {
-    font-family: 'Roboto', sans-serif;
+  .third-block {
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 0.875em;
     letter-spacing: -0.9px;
     color: #616161;
-}
+  }
 
-th.more-padding {
-  padding-bottom: 8em;
-}
+  th.more-padding {
+    padding-bottom: 8em;
+  }
 
   @media screen and (max-width: 800px) {
     .accordion {
       --bs-accordion-btn-padding-x: 0;
     }
     .accordion-title {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.25em; 
+      font-family: "Roboto", sans-serif;
+      font-size: 1.25em;
       letter-spacing: -0.9px;
       font-weight: 400;
     }
     .accordion-body {
       --bs-accordion-body-padding-x: 0.8em;
-    
     }
   }
 `;

@@ -11,13 +11,19 @@ const PaymentConfirmed = () => {
     <PaymentConfirmedContainer className="d-flex justify-content-center align-items-center">
       <Card className="text-center py-4 border-0">
         <div className="">
-          <BsCheckCircle className="confirmed-cicle-icon" /> {/* Ícone de check */}
+          <BsCheckCircle className="confirmed-cicle-icon" />{" "}
+          {/* Ícone de check */}
         </div>
         <CardBody className="">
-          <CardTitle tag="h3" className="fw-medium title-payment-confirmed pt-2">
+          <CardTitle
+            tag="h3"
+            className="fw-medium title-payment-confirmed pt-2"
+          >
             Payment Confirmed
           </CardTitle>
-          <CardText className="text-primary fw-normal subtitutle-payment-confirmed pb-2">ORDER #2039</CardText>
+          <CardText className="text-primary fw-normal subtitutle-payment-confirmed pb-2">
+            ORDER #2039
+          </CardText>
           <CardText className="text-muted text-start">
             Thank you Joe for buying Candleaf. The nature is grateful to you.
             Now that your order is confirmed it will be ready to ship in 2 days.

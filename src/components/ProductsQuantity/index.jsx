@@ -42,7 +42,7 @@ const Quantity = ({ showTag, onChange, value }) => {
 Quantity.propTypes = {
   showTag: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.number.isRequired
+  value: PropTypes.number.isRequired,
 };
 
 export default Quantity;

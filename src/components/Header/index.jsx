@@ -44,12 +44,20 @@ const Header = () => {
             </Link>
           </NavItem>
           <NavItem className="ms-4">
-            <Link to="/#about" onClick={() => setCollapsed(true)} className="nav-link">
+            <Link
+              to="/#about"
+              onClick={() => setCollapsed(true)}
+              className="nav-link"
+            >
               About
             </Link>
           </NavItem>
           <NavItem className="ms-4">
-            <Link to="/#" onClick={() => setCollapsed(true)} className="nav-link">
+            <Link
+              to="/#"
+              onClick={() => setCollapsed(true)}
+              className="nav-link"
+            >
               Contact Us
             </Link>
           </NavItem>
@@ -78,12 +86,20 @@ const Header = () => {
               </Link>
             </NavItem>
             <NavItem className="ms-4">
-              <Link to="/#about" onClick={() => setCollapsed(true)} className="nav-link">
+              <Link
+                to="/#about"
+                onClick={() => setCollapsed(true)}
+                className="nav-link"
+              >
                 About
               </Link>
             </NavItem>
             <NavItem className="ms-4">
-              <Link to="/#" onClick={() => setCollapsed(true)} className="nav-link">
+              <Link
+                to="/#"
+                onClick={() => setCollapsed(true)}
+                className="nav-link"
+              >
                 Contact Us
               </Link>
             </NavItem>

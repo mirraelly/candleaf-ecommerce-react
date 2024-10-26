@@ -31,7 +31,7 @@ const OrderSummaryAccordion = ({ className }) => {
   //calculate the subtotal (sum of the values of all items)
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
-    0
+    0,
   );
 
   return (

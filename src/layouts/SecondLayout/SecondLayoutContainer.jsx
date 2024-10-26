@@ -14,7 +14,6 @@ const SecondLayoutContainer = styled.main`
     background-color: #f2f2f2;
   }
 
-
   @media (max-width: 900px) {
     .left-secondlayout {
       padding-left: 3em;

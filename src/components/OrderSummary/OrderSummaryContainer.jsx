@@ -35,9 +35,9 @@ const OrderSummaryContainer = styled.section`
   }
 
   .lg-price {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 1.5em;
     letter-spacing: -0.9px;
     color: black;
@@ -82,27 +82,26 @@ const OrderSummaryContainer = styled.section`
     background-color: #f7f8fa;
   }
 
-.add-button {
+  .add-button {
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     letter-spacing: 0px;
     padding: 0.47em 1.3em;
-}
+  }
 
-.third-block {
-    font-family: 'Roboto', sans-serif;
+  .third-block {
+    font-family: "Roboto", sans-serif;
     font-style: normal;
-    font-weight: 500; 
+    font-weight: 500;
     font-size: 0.875em;
     letter-spacing: -0.9px;
     color: #616161;
-}
+  }
 
-th.more-padding {
-  padding-bottom: 8em;
-}
-
+  th.more-padding {
+    padding-bottom: 8em;
+  }
 `;
 
 export default OrderSummaryContainer;
