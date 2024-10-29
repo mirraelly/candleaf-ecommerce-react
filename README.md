@@ -136,9 +136,9 @@ de deploy e/ou os prints disponíveis neste repositório. <br><br>
     <div align="center">
       <div style="display: flex; flex-direction: column;">
         <div>
-          <img alt="Phone Inicial Page" height="580" width="240" src="./src/assets/images/Readme/1-phone-home.png">
-          <img alt="Phone Testemonials Page" height="580" width="240" src="./src/assets/images/Readme/2-phone-testemonials.png">
-          <img alt="Phone Cart Rout" height="580" width="240" src="./src/assets/images/Readme/9-phone-acorddion.png">
+          <img alt="Phone Inicial Page" height="540" width="240" src="./src/assets/images/Readme/1-phone-home.png">
+          <img alt="Phone Testemonials Page" height="540" width="240" src="./src/assets/images/Readme/2-phone-testemonials.png">
+          <img alt="Phone Cart Rout" height="540" width="240" src="./src/assets/images/Readme/9-phone-acorddion.png">
         </div>
         <div>
           <em>Visualização de telas via Celular</em>
